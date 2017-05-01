@@ -2,24 +2,49 @@
 layout: home
 ---
 
-<header class="header1">
-    <div class="container">
-        <div class="row">
-            <div class="logo">
-                <h3>My PORTFOLIO</h3>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="">Project 1</a></li>
-                    <li><a href="">Project 2</a></li>
-                    <li><a href="">Project 3</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
-
-
+{% include header.html %}
 
 {% include hero.html %}
 
+<section class="project-description theme-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="text-block">
+                    <small>Project 1</small>
+                    <h1>Easy Road</h1>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+                    <p class="disciplines"><span>// UX design</span></p>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="img-block">
+                    <img src="http://placehold.it/570x450">
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<section class="project-description theme-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="text-block">
+                    <small>Project 2</small>
+                    <h1>Newfi</h1>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+                    <p class="disciplines"><span>// UX design, development</span></p>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="img-block">
+                    <img src="http://placehold.it/570x450">
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

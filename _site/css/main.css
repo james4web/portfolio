@@ -1,29 +1,110 @@
-header.header1 .container .row {
-  display: flex;
-  justify-content: space-between; }
-  header.header1 .container .row nav ul li {
-    display: inline;
-    margin-left: 30px; }
+p {
+  font-family: 'Roboto Slab', serif; }
+
+.project-description {
+  padding-top: 50px; }
+  .project-description.theme-1 .text-block {
+    position: relative;
+    padding: 40px 0px 40px 30px;
+    color: #4a4a4a; }
+    .project-description.theme-1 .text-block small {
+      font-size: 18px;
+      letter-spacing: 3px;
+      font-weight: 600;
+      text-transform: uppercase; }
+    .project-description.theme-1 .text-block h1 {
+      padding-top: 20px;
+      font-size: 65px;
+      font-weight: 800;
+      margin-bottom: 40px; }
+    .project-description.theme-1 .text-block:after {
+      background: #fafafa;
+      content: '';
+      height: 110%;
+      width: 900px;
+      position: absolute;
+      top: 0;
+      left: -15px;
+      z-index: -1; }
+    .project-description.theme-1 .text-block p {
+      color: #999999;
+      font-size: 17px; }
+      .project-description.theme-1 .text-block p.disciplines {
+        font-size: 14px;
+        font-weight: 800;
+        text-transform: uppercase;
+        padding-top: 30px; }
+        .project-description.theme-1 .text-block p.disciplines span {
+          position: relative; }
+          .project-description.theme-1 .text-block p.disciplines span:after {
+            content: '';
+            position: absolute;
+            border-bottom: 10px solid rgba(248, 221, 28, 0.3);
+            margin-top: -5px;
+            width: 100%;
+            bottom: -6px;
+            left: 0; }
+  .project-description.theme-1 .img-block {
+    padding-top: 70px; }
+    .project-description.theme-1 .img-block img {
+      position: absolute;
+      right: 0px; }
+    .project-description.theme-1 .img-block a {
+      display: block;
+      text-align: right;
+      color: #30D287; }
+
+header.header1 {
+  height: 80px; }
+  header.header1 .container .row {
+    display: flex;
+    justify-content: space-between; }
+    header.header1 .container .row .logo {
+      padding-left: 60px; }
+      header.header1 .container .row .logo h3 {
+        font-size: 18px;
+        padding-top: 32px;
+        font-weight: 700;
+        color: #666;
+        letter-spacing: -1px; }
+    header.header1 .container .row nav {
+      padding-top: 28px; }
+      header.header1 .container .row nav ul {
+        padding-right: 20px; }
+        header.header1 .container .row nav ul li {
+          display: inline;
+          margin-left: 40px; }
+          header.header1 .container .row nav ul li a {
+            color: #999;
+            font-size: 14px;
+            font-weight: 600; }
+            header.header1 .container .row nav ul li a:hover {
+              text-decoration: none;
+              color: #111; }
 
 .container.hero {
-  background-color: #ffe000;
+  background-color: #F8DE1C;
   display: flex;
-  height: 450px;
+  height: 625px;
   align-items: center; }
   .container.hero div {
-    padding-left: 20px; }
+    padding-left: 50px; }
     .container.hero div h1 {
       font-weight: 800;
-      font-size: 46px;
-      margin-bottom: 50px;
+      font-size: 85px;
+      margin-bottom: 90px;
       position: relative;
-      font-family: lato; }
+      font-family: lato;
+      color: #444; }
       .container.hero div h1:after {
         content: '';
         position: absolute;
         display: block;
         border-bottom: 5px solid #333;
-        width: 40px;
-        bottom: -25px; }
+        width: 80px;
+        bottom: -48px;
+        color: #444; }
     .container.hero div p {
-      max-width: 600px; }
+      max-width: 600px;
+      color: #444;
+      font-size: 22px; }
