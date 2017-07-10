@@ -3,3 +3,10 @@ baseurl: /portfolio
 exclude: ['README.md']
 sass:
     sass_dir: _scss
+# deployment
+port: 4100
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true

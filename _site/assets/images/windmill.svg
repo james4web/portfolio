@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="221px" height="379px" viewBox="0 0 221 379" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 13</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-1.1%" y="-1.8%" width="102.3%" height="105.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.14136096 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-22" transform="translate(-1130.000000, -388.000000)" fill="#093261">
+            <g id="Group" transform="translate(30.000000, 80.000000)">
+                <g id="main-light" filter="url(#filter-1)" transform="translate(0.000000, 50.000000)">
+                    <g id="windmill" transform="translate(1109.000000, 263.000000)">
+                        <g id="Group-13">
+                            <polyline id="Fill-37" points="93.445 361.177 148.167 30.853 143.55 30.085 88.698 361.177 93.445 361.177"></polyline>
+                            <polyline id="Fill-38" points="128.404 361.177 148.198 30.615 143.525 30.329 123.714 361.177 128.404 361.177"></polyline>
+                            <polyline id="Fill-39" points="203.017 361.177 148.167 30.085 143.55 30.853 198.276 361.177 203.017 361.177"></polyline>
+                            <polyline id="Fill-40" points="168.011 361.177 148.198 30.329 143.525 30.615 163.318 361.177 168.011 361.177"></polyline>
+                            <path d="M162.629,30.464 C162.629,39.725 155.115,47.233 145.86,47.233 C136.6,47.233 129.09,39.725 129.09,30.464 C129.09,21.204 136.6,13.689 145.86,13.689 C155.115,13.689 162.629,21.204 162.629,30.464" id="Fill-41"></path>
+                            <polyline id="Fill-58" points="74.112 21.399 70.404 13.689 0 0.042 0 60.89 70.404 47.233 74.112 39.525 141.033 35.288 141.033 25.656 74.112 21.399"></polyline>
+                            <path d="M177.448,152.381 L114.267,152.381 C112.201,152.381 110.529,150.704 110.529,148.625 C110.529,146.568 112.201,144.888 114.267,144.888 L177.448,144.888 C179.518,144.888 181.192,146.568 181.192,148.625 C181.192,150.704 179.518,152.381 177.448,152.381" id="Fill-59"></path>
+                            <path d="M188.566,212.63 L103.154,212.63 C101.084,212.63 99.411,210.958 99.411,208.883 C99.411,206.825 101.084,205.14 103.154,205.14 L188.566,205.14 C190.632,205.14 192.308,206.825 192.308,208.883 C192.308,210.958 190.632,212.63 188.566,212.63" id="Fill-60"></path>
+                            <path d="M199.677,284.001 L92.036,284.001 C89.967,284.001 88.293,282.328 88.293,280.26 C88.293,278.195 89.967,276.518 92.036,276.518 L199.677,276.518 C201.746,276.518 203.424,278.195 203.424,280.26 C203.424,282.328 201.746,284.001 199.677,284.001" id="Fill-61"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
