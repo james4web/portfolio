@@ -168,6 +168,7 @@ header {
     /*background-image: url('{{ site.url }}//portfolio/assets/images/hero.jpg');*/
     display: flex;
     height: calc( 100vh - 80px );
+    max-height: 900px;
     align-items: center;
     div.container {
         position: relative;
