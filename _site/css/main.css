@@ -14,7 +14,7 @@ p {
     padding: 40px 0px 40px 0px;
     color: #4a4a4a; }
     .project-description.theme-1 .text-block small {
-      font-size: 14px;
+      font-size: 16px;
       letter-spacing: 3px;
       font-weight: 600;
       text-transform: uppercase;
@@ -23,7 +23,7 @@ p {
     .project-description.theme-1 .text-block h1 {
       margin-top: 30px;
       padding: 10px 20px;
-      font-size: 45px;
+      font-size: 60px;
       font-weight: 800;
       color: white;
       margin-bottom: 40px;
