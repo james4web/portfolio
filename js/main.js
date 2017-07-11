@@ -55,3 +55,17 @@ window.onload = function() {
   css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
   document.body.appendChild(css);
 };
+
+// Progress bar animation
+      $(document).ready(progressBarAnimation);
+
+function progressBarAnimation() {
+  function updatePercent() {
+    const currentWidth = $(this).width() / $(this).parent().width() * 10;
+    $(this).text(currentWidth.toFixed(0) + '/10');
+  }
+
+  $('#css-progress').animate({width: '60%'}, {duration: 3000, step: updatePercent});
+  $('#html-progress').animate({width: '90%'}, {duration: 3000, step: updatePercent});
+  $('#jquery-progress').animate({width: '70%'}, {duration: 3000, step: updatePercent});
+}
