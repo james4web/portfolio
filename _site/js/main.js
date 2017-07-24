@@ -1,4 +1,4 @@
-
+// Typing functionality in homepage hero
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -69,3 +69,53 @@ function progressBarAnimation() {
   $('#html-progress').animate({width: '90%'}, {duration: 3000, step: updatePercent});
   $('#jquery-progress').animate({width: '70%'}, {duration: 3000, step: updatePercent});
 }
+
+// Add onscroll animations
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+     //>=, not <=
+    if (scroll >= 100) {
+        //clearHeader, not clearheader - caps H
+        $(".project-1 .text-block").addClass("project-animate");
+    }
+}); //missing );
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+     //>=, not <=
+    if (scroll >= 800) {
+        //clearHeader, not clearheader - caps H
+        $(".project-2 .text-block").addClass("project-animate");
+    }
+}); //missing );
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+     //>=, not <=
+    if (scroll >= 100) {
+        //clearHeader, not clearheader - caps H
+        $(".skillset .text-block").addClass("project-animate");
+    }
+}); //missing );
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+     //>=, not <=
+    if (scroll >= 1200) {
+        //clearHeader, not clearheader - caps H
+        $(".skillset").addClass("project-animate");
+    }
+}); //missing );
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+     //>=, not <=
+    if (scroll >= 1500) {
+        //clearHeader, not clearheader - caps H
+        $(".progress-bar").addClass("grow");
+    }
+}); //missing );

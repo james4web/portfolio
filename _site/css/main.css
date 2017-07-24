@@ -4,21 +4,37 @@
 p {
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
-  color: #777;
+  color: #111111;
   font-size: 17px; }
 
 .project-description {
   padding-bottom: 50px; }
   .project-description.theme-1 .text-block {
-    position: relative;
     padding: 40px 0px 40px 0px;
-    color: #4a4a4a; }
+    color: #4a4a4a;
+    left: -999px;
+    transition: left 1s ease, opacity 2s ease;
+    position: absolute;
+    opacity: 0; }
+    .project-description.theme-1 .text-block.project-animate {
+      position: relative;
+      left: 0;
+      opacity: 1; }
+    .project-description.theme-1 .text-block .text-block {
+      left: -999px;
+      transition: left 1s ease, opacity 2s ease;
+      position: absolute;
+      opacity: 0; }
+      .project-description.theme-1 .text-block .text-block.project-animate {
+        position: relative;
+        left: 0;
+        opacity: 1; }
     .project-description.theme-1 .text-block small {
       font-size: 16px;
       letter-spacing: 3px;
       font-weight: 600;
       text-transform: uppercase;
-      color: #30D187;
+      color: #2ae690;
       display: block; }
     .project-description.theme-1 .text-block h1 {
       margin-top: 30px;
@@ -27,7 +43,7 @@ p {
       font-weight: 800;
       color: white;
       margin-bottom: 40px;
-      background-color: #30D187;
+      background: #2ae690;
       line-height: 1em;
       display: inline-block; }
     .project-description.theme-1 .text-block p.disciplines {
@@ -54,14 +70,23 @@ p {
       display: block;
       text-align: right;
       color: #30D287; }
-  .project-description.skillset h1 {
-    background-color: #F9024D !important; }
-  .project-description.skillset p {
-    max-width: 800px; }
-  .project-description.skillset h4 {
-    color: #F9024D !important;
-    font-weight: 800;
-    font-size: 18px; }
+  .project-description.skillset {
+    left: -999px;
+    transition: left 1s ease, opacity 2s ease;
+    position: absolute;
+    opacity: 0; }
+    .project-description.skillset.project-animate {
+      position: relative;
+      left: 0;
+      opacity: 1; }
+    .project-description.skillset h1 {
+      background-color: #F9024D !important; }
+    .project-description.skillset p {
+      max-width: 800px; }
+    .project-description.skillset h4 {
+      color: #F9024D !important;
+      font-weight: 800;
+      font-size: 18px; }
 
 header.header1 {
   height: 80px; }
@@ -72,7 +97,7 @@ header.header1 {
       font-size: 28px;
       padding-top: 32px;
       font-weight: 700;
-      color: #bbb;
+      color: #c4c4c4;
       letter-spacing: -1px; }
     header.header1 .container .row nav {
       padding-top: 28px; }
@@ -97,7 +122,7 @@ header.header1 {
             background-color: #eee;
             width: 100%; }
           header.header1 .container .row nav ul li a {
-            color: #aaaaaa;
+            color: #2ae690;
             font-size: 14px;
             font-weight: 600;
             padding: 10px 20px;
@@ -119,97 +144,37 @@ header.header1 {
       font-weight: 800;
       font-size: 105px;
       margin-bottom: 50px;
-      color: #444444;
+      color: #111111;
       letter-spacing: -1px;
       display: block; }
     .container-fluid.hero div.container p {
       max-width: 750px;
-      color: #444444;
+      color: #111111;
       font-size: 20px;
       display: block;
       line-height: 1.6em; }
 
-.graph-cont {
-  width: calc(100% - 40px);
-  width: 100%;
-  max-width: 800px; }
-
-.bar {
-  height: 30px;
-  max-width: 800px;
-  margin: 0 auto 10px 100px;
-  line-height: 30px;
-  font-size: 16px;
-  color: #eee;
-  padding: 0 0 0 10px;
-  position: relative;
-  text-align: right; }
-  .bar:nth-child(1) {
-    padding-right: 10%; }
-  .bar:nth-child(2) {
-    padding-right: 20%; }
-  .bar:nth-child(3) {
-    padding-right: 20%; }
-  .bar:nth-child(4) {
-    padding-right: 30%; }
-  .bar:nth-child(5) {
-    padding-right: 40%; }
-  .bar span {
-    position: absolute;
-    left: -100px;
-    color: #777;
-    font-weight: 600; }
-
-.bar::before {
-  content: '';
-  width: 100%;
-  position: absolute;
-  left: 0;
-  height: 30px;
-  top: 0;
-  z-index: -2;
-  background: #eee; }
-
-.bar::after {
-  content: '';
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eecda3+0,f4526f+100 */
-  background: #eecda3;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #eecda3 0%, #f4526f 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #eecda3 0%, #f4526f 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #eecda3 0%, #f4526f 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecda3', endColorstr='#f4526f',GradientType=1 );
-  /* IE6-9 */
-  height: 30px;
-  transition: 0.7s;
-  display: block;
-  width: 100%;
-  -webkit-animation: bar-before 1 1.8s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1; }
-
-.bar1::after {
-  max-width: 90%; }
-
-.bar2::after {
-  max-width: 80%; }
-
-.bar3::after {
-  max-width: 80%; }
-
-.bar4::after {
-  max-width: 70%; }
-
-.bar5::after {
-  max-width: 60%; }
-
-@-webkit-keyframes bar-before {
-  0% {
-    width: 0px; }
-  100% {
-    width: 100%; } }
+.progress-element .progress {
+  margin-bottom: 20px;
+  text-align: left;
+  text-indent: 60px;
+  border-radius: 1px; }
+  .progress-element .progress .progress-bar {
+    height: 30px;
+    line-height: 2.6em;
+    background: red;
+    letter-spacing: 1px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eecda3+0,f9024d+100 */
+    background: #eecda3;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #eecda3 0%, #f9024d 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #eecda3 0%, #f9024d 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #eecda3 0%, #f9024d 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecda3', endColorstr='#f9024d',GradientType=1 );
+    /* IE6-9 */
+    transition: width 1.5s ease; }
+    .progress-element .progress .progress-bar.grow {
+      width: 100%; }
