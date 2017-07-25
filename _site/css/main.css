@@ -11,24 +11,7 @@ p {
   padding-bottom: 50px; }
   .project-description.theme-1 .text-block {
     padding: 40px 0px 40px 0px;
-    color: #4a4a4a;
-    left: -999px;
-    transition: left 1s ease, opacity 2s ease;
-    position: absolute;
-    opacity: 0; }
-    .project-description.theme-1 .text-block.project-animate {
-      position: relative;
-      left: 0;
-      opacity: 1; }
-    .project-description.theme-1 .text-block .text-block {
-      left: -999px;
-      transition: left 1s ease, opacity 2s ease;
-      position: absolute;
-      opacity: 0; }
-      .project-description.theme-1 .text-block .text-block.project-animate {
-        position: relative;
-        left: 0;
-        opacity: 1; }
+    color: #4a4a4a; }
     .project-description.theme-1 .text-block small {
       font-size: 16px;
       letter-spacing: 3px;
@@ -65,28 +48,27 @@ p {
     padding-top: 30px; }
     .project-description.theme-1 .img-block img {
       position: absolute;
-      right: 0px; }
+      right: 0px;
+      bottom: -999px;
+      transition: bottom .4s ease, opacity .4s ease;
+      position: absolute;
+      opacity: 0; }
+      .project-description.theme-1 .img-block img.project-animate {
+        position: relative;
+        bottom: 0;
+        opacity: 1; }
     .project-description.theme-1 .img-block a {
       display: block;
       text-align: right;
       color: #30D287; }
-  .project-description.skillset {
-    left: -999px;
-    transition: left 1s ease, opacity 2s ease;
-    position: absolute;
-    opacity: 0; }
-    .project-description.skillset.project-animate {
-      position: relative;
-      left: 0;
-      opacity: 1; }
-    .project-description.skillset h1 {
-      background-color: #F9024D !important; }
-    .project-description.skillset p {
-      max-width: 800px; }
-    .project-description.skillset h4 {
-      color: #F9024D !important;
-      font-weight: 800;
-      font-size: 18px; }
+  .project-description.skillset h1 {
+    background-color: #F9024D !important; }
+  .project-description.skillset p {
+    max-width: 800px; }
+  .project-description.skillset h4 {
+    color: #F9024D !important;
+    font-weight: 800;
+    font-size: 18px; }
 
 header.header1 {
   height: 80px; }
@@ -161,6 +143,7 @@ header.header1 {
   border-radius: 1px; }
   .progress-element .progress .progress-bar {
     height: 30px;
+    width: 0%;
     line-height: 2.6em;
     background: red;
     letter-spacing: 1px;
@@ -176,5 +159,13 @@ header.header1 {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecda3', endColorstr='#f9024d',GradientType=1 );
     /* IE6-9 */
     transition: width 1.5s ease; }
-    .progress-element .progress .progress-bar.grow {
-      width: 100%; }
+  .progress-element .progress:nth-of-type(1) .progress-bar.grow {
+    width: 90%; }
+  .progress-element .progress:nth-of-type(2) .progress-bar.grow {
+    width: 90%; }
+  .progress-element .progress:nth-of-type(3) .progress-bar.grow {
+    width: 90%; }
+  .progress-element .progress:nth-of-type(4) .progress-bar.grow {
+    width: 70%; }
+  .progress-element .progress:nth-of-type(5) .progress-bar.grow {
+    width: 50%; }

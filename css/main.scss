@@ -31,26 +31,6 @@ p {
         .text-block {
             padding: 40px 0px 40px 0px;
             color: #4a4a4a;
-            left: -999px;
-            transition: left 1s ease, opacity 2s ease;
-            position: absolute;
-            opacity: 0;
-        	&.project-animate {
-            	position: relative;
-            	left: 0;
-            	opacity: 1;
-            }
-            .text-block {
-	        	left: -999px;
-	            transition: left 1s ease, opacity 2s ease;
-	            position: absolute;
-	            opacity: 0;
-	        	&.project-animate {
-	            	position: relative;
-	            	left: 0;
-	            	opacity: 1;
-	            }
-            }
             small {
                 font-size: 16px;
                 letter-spacing: 3px;
@@ -96,6 +76,15 @@ p {
             img {
                 position: absolute;
                 right: 0px;
+                bottom: -999px;
+	            transition: bottom .4s ease, opacity .4s ease;
+	            position: absolute;
+	            opacity: 0;
+	        	&.project-animate {
+	            	position: relative;
+	            	bottom: 0;
+	            	opacity: 1;
+	            }
             }
             a {
                 display: block;
@@ -105,15 +94,6 @@ p {
         }
     }
     &.skillset {
-        left: -999px;
-        transition: left 1s ease, opacity 2s ease;
-        position: absolute;
-        opacity: 0;
-    	&.project-animate {
-        	position: relative;
-        	left: 0;
-        	opacity: 1;
-        }
         h1 {
             background-color: $pink !important;
         }
@@ -228,6 +208,7 @@ header {
 	    border-radius: 1px;
 		.progress-bar {
 			height: 30px;
+			width: 0%;
     		line-height: 2.6em;
     		background: red;
     		letter-spacing: 1px;
@@ -238,9 +219,21 @@ background: -webkit-linear-gradient(left, #eecda3 0%,#f9024d 100%); /* Chrome10-
 background: linear-gradient(to right, #eecda3 0%,#f9024d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecda3', endColorstr='#f9024d',GradientType=1 ); /* IE6-9 */
 		transition: width 1.5s ease;
-		&.grow {
-			width: 100%;
+	}
+		&:nth-of-type(1) .progress-bar.grow {
+		width: 90%;
 		}
+		&:nth-of-type(2) .progress-bar.grow {
+		width: 90%;
+		}
+		&:nth-of-type(3) .progress-bar.grow {
+		width: 90%;
+		}
+		&:nth-of-type(4) .progress-bar.grow {
+		width: 70%;
+		}
+		&:nth-of-type(5) .progress-bar.grow {
+		width: 50%;
 		}
 	}
 }

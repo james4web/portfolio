@@ -52,23 +52,10 @@ window.onload = function() {
   // INJECT CSS
   var css = document.createElement("style");
   css.type = "text/css";
-  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.09em solid #aaa }";
   document.body.appendChild(css);
 };
 
-// Progress bar animation
-      $(document).ready(progressBarAnimation);
-
-function progressBarAnimation() {
-  function updatePercent() {
-    const currentWidth = $(this).width() / $(this).parent().width() * 10;
-    $(this).text(currentWidth.toFixed(0) + '/10');
-  }
-
-  $('#css-progress').animate({width: '60%'}, {duration: 3000, step: updatePercent});
-  $('#html-progress').animate({width: '90%'}, {duration: 3000, step: updatePercent});
-  $('#jquery-progress').animate({width: '70%'}, {duration: 3000, step: updatePercent});
-}
 
 // Add onscroll animations
 $(window).scroll(function() {    
@@ -77,7 +64,7 @@ $(window).scroll(function() {
      //>=, not <=
     if (scroll >= 100) {
         //clearHeader, not clearheader - caps H
-        $(".project-1 .text-block").addClass("project-animate");
+        $(".project-1 img").addClass("project-animate");
     }
 }); //missing );
 $(window).scroll(function() {    
@@ -86,30 +73,9 @@ $(window).scroll(function() {
      //>=, not <=
     if (scroll >= 800) {
         //clearHeader, not clearheader - caps H
-        $(".project-2 .text-block").addClass("project-animate");
+        $(".project-2 img").addClass("project-animate");
     }
 }); //missing );
-
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-     //>=, not <=
-    if (scroll >= 100) {
-        //clearHeader, not clearheader - caps H
-        $(".skillset .text-block").addClass("project-animate");
-    }
-}); //missing );
-
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-     //>=, not <=
-    if (scroll >= 1200) {
-        //clearHeader, not clearheader - caps H
-        $(".skillset").addClass("project-animate");
-    }
-}); //missing );
-
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
 
