@@ -4,6 +4,7 @@
 $darkBlue: #042F73;
 $blue: #0076FF;
 $green: #2ae690;
+$yellow: #F8DD1C;
 $lightYellow: #F7F2B7;
 $pink: #F9024D;
 $bodyText: #777;
@@ -12,16 +13,18 @@ $color: #093261;
 $color2: white;
 $color3: black;
 
+
 * {
-    font-family: helvetica, helvetica-neue, arial, sans-serif;
+    font-family: lato, sans-serif;
 }
 
 // misc stylings
 p {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
-    color: darken( $bodyText, 40%);
-    font-size: 17px;
+  font-family: 'lato', serif;
+  font-weight: 400;
+  color: darken( $bodyText, 40%);
+  font-size: 17px;
+  line-height: 1.6em;
 }
 
 // Project descripton sections on homepage
@@ -31,40 +34,56 @@ p {
         .text-block {
             padding: 40px 0px 40px 0px;
             color: #4a4a4a;
-            small {
-                font-size: 16px;
+            small, small a {
+                font-size: 14px;
                 letter-spacing: 3px;
                 font-weight: 600;
                 text-transform: uppercase;
-                color: $green;
                 display: block;
+                font-family: 'Teko', sans-serif;
+              span {
+                margin-left: 15px;
+                margin-right: 15px;
+              }
+              a {
+                display: inline-block;
+                color: $pink;
+              }
             }
             h1 {
-                margin-top: 30px;
-                padding: 10px 20px;
-                font-size: 60px;
+                margin-top: 28px;
+                font-size: 75px;
+                text-transform: uppercase;
                 font-weight: 800;
-                color: white;
-                margin-bottom: 40px;
-                background: $green;
+                font-family: 'Teko', sans-serif;
+                color: black;
+                margin-bottom: 8px;
                 line-height: 1em;
                 display: inline-block;
+                & + small {
+					margin-bottom: 15px;
+					display: block;
+					color: #FA4065
+                }
             }
             p {
                 &.disciplines {
                     font-size: 14px;
                     font-weight: 800;
                     text-transform: uppercase;
-                    padding-top: 30px;
+                    padding-top: 25px;
+                    color: #999;
                     span {
                         position: relative;
+                        font-family: 'Teko', sans-serif;
+                        letter-spacing: 1.5px;
                         &:after {
                             content: '';
                             position: absolute;
                             border-bottom: 10px solid rgba(248, 221, 28, 0.3);
                             margin-top: -5px;
                             width: 100%;
-                            bottom: -6px;
+                            bottom: 0px;
                             left: 0;
                         }
                     }
@@ -72,31 +91,88 @@ p {
             }
         }
         .img-block {
-            padding-top: 30px;
-            img {
-                position: absolute;
-                right: 0px;
-                bottom: -999px;
-	            transition: bottom .4s ease, opacity .4s ease;
-	            position: absolute;
-	            opacity: 0;
-	        	&.project-animate {
-	            	position: relative;
-	            	bottom: 0;
-	            	opacity: 1;
-	            }
+            margin-top: 30px;
+            display: flex;
+		    flex-direction: row;
+		    justify-content: flex-end;
+            div {
+            	position: absolute;
+            	transform: translateY(0%);
+            	max-width: 100%;
+            	height: 100%;
+            	display: flex;
+            	opacity: 0;
+            	width: 100%;
+            	flex-direction: column;
+            	transition: 0.8s ease;
+            	transition-delay: 0.5s;
+            	h4 {
+            		color: white;
+            		font-family: lato, sans-serif;
+            		font-size: 20px;
+            		font-weight: bold;
+            		text-shadow: 0px 2px 10px rgba(1,1,1,0.1);
+            		border-bottom: 1px solid #fff;
+            		line-height: 1em;
+            		padding-bottom: 35px;
+            		padding-right: 20px;
+            		text-align: right;
+            		text-transform: uppercase;
+            		letter-spacing: 3px;
+            		box-shadow: 0px 2px 10px rgba(1,1,1,0.1);
+            		max-width: 100%;
+            		margin-top: auto;
+            	}
+            	p {
+            		font-size: 14px;
+            		padding-right: 20px;
+					color: white;
+					font-weight: 300;
+            		text-shadow:  2px 10px rgba(1,1,1,0.1);
+            		text-align: right;
+            		letter-spacing: 0.5px;
+            		margin-bottom: 1rem;
+            	}
             }
             a {
-                display: block;
+            	display: block;
+            	position: relative;
                 text-align: right;
                 color: #30D287;
-            }
+                transition: 2.5s ease;
+                overflow: hidden;
+                border-radius: 3px;
+                padding: 0;
+                &:hover {
+                  img {
+                    transform: scale(1.05);
+                  }
+                }
+	            img {
+	                position: absolute;
+	                right: 0px;
+		            opacity: 0;
+		            width: 100%;
+		            height: auto;
+		            transition: 1.5s ease;
+		            border-radius: 3px;
+                    -webkit-filter: blur(5px); /* Safari */
+                    filter: blur(5px);
+		        	&.project-animate {
+		            	position: relative;
+		            	opacity: 1;
+                      -webkit-filter: blur(0px); /* Safari */
+                      filter: blur(0px);
+		            	& + div {
+                          opacity: 1;
+                          transform: translateY(-100%);
+		            	}
+		            }
+	            }
+        	}
         }
     }
     &.skillset {
-        h1 {
-            background-color: $pink !important;
-        }
         p {
             max-width: 800px;
         }
@@ -108,6 +184,53 @@ p {
     }
 }
 
+//View more section on homepage
+section.more-projects {
+  .clearfix {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 150px;
+    border-bottom: 1px solid #eee;
+    .col > a {
+      line-height: 3em;
+      padding-right: 0px;
+      text-align: right;
+      display: inline-block;
+      float: right;
+      height: 100%;
+      width: 100%;
+      &:hover {
+        text-decoration: none;
+      }
+      p {
+        color: $blue;
+        font-weight: bold;
+        text-align: right;
+        margin-bottom: 0;
+        
+        i {
+          margin-left: 20px;
+        }
+      }
+    }
+    .col {
+      width: 100%;
+      &:nth-last-child(3) {
+        //background: lighten($blue, 40%);
+      }
+      &:nth-last-child(2) {
+        //background: lighten($blue, 20%);
+      }
+      &:nth-last-child(1) {
+        //background: $blue;
+        //transition: all 0.3s ease;
+
+      }
+    }
+  }
+}
+
+
 // header styles
 header {
     &.header1 {
@@ -118,11 +241,15 @@ header {
                 justify-content: space-between;
                 .logo {
                     h3 {
-                        font-size: 28px;
+                        font-size: 23px;
                         padding-top: 32px;
-                        font-weight: 700;
-                        color: lighten($bodyText, 30%);
+                        font-weight: 800;
+                        color: darken($pink, 0%);;
                         letter-spacing: -1px;
+                        span {
+                        	font-weight: 400;
+                        	padding-right: 2px;
+                        }
                     }
                 }
                 nav {
@@ -143,7 +270,7 @@ header {
                                 left: 0;
                                 top: 0;
                                 z-index: -1;
-                                transition: .5s width;
+                                transition: .3s width;
                             }
                             &:hover {
                                 &:after {
@@ -152,7 +279,7 @@ header {
                                 }
                             }
                             a {
-                                color: $green;
+                                color: #999;
                                 font-size: 14px;
                                 font-weight: 600;
                                 padding: 10px 20px;
@@ -175,18 +302,22 @@ header {
 .container-fluid.hero {
     /*background-image: url('{{ site.url }}//portfolio/assets/images/hero.jpg');*/
     display: flex;
-    height: calc( 100vh - 80px );
-    max-height: 900px;
+    height: 582px;
     align-items: center;
+    background: #fafafa;
+    margin-bottom: 50px;
     div.container {
         position: relative;
         h1 {
-            font-weight: 800;
-            font-size: 105px;
-            margin-bottom: 50px;
-            color: darken( $bodyText, 40%);
-            letter-spacing: -1px;
-            display: block;
+          font-weight: 800;
+          font-size: 105px;
+          margin-bottom: 50px;
+          line-height: 1em;
+          color: #FA4065;
+          letter-spacing: -1px;
+          display: block;
+          font-family: 'Teko', sans-serif;
+          //font-family: 'Engagement', cursive;
         }
         p {
             max-width: 750px;
@@ -201,6 +332,7 @@ header {
 
 // Code for bar graph
 .progress-element {
+  max-width: 900px;
 	.progress {
 		margin-bottom: 20px;
 	    text-align: left;
@@ -208,6 +340,7 @@ header {
 	    border-radius: 1px;
 		.progress-bar {
 			height: 30px;
+			font-weight: bold;
 			width: 0%;
     		line-height: 2.6em;
     		background: red;
@@ -219,6 +352,7 @@ background: -webkit-linear-gradient(left, #eecda3 0%,#f9024d 100%); /* Chrome10-
 background: linear-gradient(to right, #eecda3 0%,#f9024d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecda3', endColorstr='#f9024d',GradientType=1 ); /* IE6-9 */
 		transition: width 1.5s ease;
+		text-shadow: 0px 0px 10px rgba(1,1,1,0.1);
 	}
 		&:nth-of-type(1) .progress-bar.grow {
 		width: 90%;
@@ -237,3 +371,59 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecda3', end
 		}
 	}
 }
+
+
+//PROJECT PAGES
+#project-page {
+  .project-title {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    h1 {
+      width: 100%;
+      font-weight: 800;
+      font-size: 55px;
+    }
+    h5 {
+      color: lighten($color3, 50%);
+    }
+
+  }
+
+  .project-hero {
+    width: 100%;
+    height: 500px;
+    background-image: url('../assets/images/easy-road.jpg');
+    background-size: cover;
+  }
+  .sticky-column {
+    padding-top: 100px;
+    h3 {
+      font-weight: 900;
+      margin-bottom: 20px;
+      color: $pink;
+    }
+    .d-flex {
+      display: flex;
+    }
+    .p-rel {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      height: 100%;
+    }
+    .sticky {
+      position: sticky;
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
+      top: 0;
+      padding-left: 0;
+      padding-right: 15px;
+      width: 100%;
+      max-width: 520px;
+      height: 100px;
+    }
+  }
+}
+

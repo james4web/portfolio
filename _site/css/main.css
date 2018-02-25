@@ -1,68 +1,135 @@
 * {
-  font-family: helvetica, helvetica-neue, arial, sans-serif; }
+  font-family: lato, sans-serif; }
 
 p {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'lato', serif;
   font-weight: 400;
   color: #111111;
-  font-size: 17px; }
+  font-size: 17px;
+  line-height: 1.6em; }
 
 .project-description {
   padding-bottom: 50px; }
   .project-description.theme-1 .text-block {
     padding: 40px 0px 40px 0px;
     color: #4a4a4a; }
-    .project-description.theme-1 .text-block small {
-      font-size: 16px;
+    .project-description.theme-1 .text-block small, .project-description.theme-1 .text-block small a {
+      font-size: 14px;
       letter-spacing: 3px;
       font-weight: 600;
       text-transform: uppercase;
-      color: #2ae690;
-      display: block; }
+      display: block;
+      font-family: 'Teko', sans-serif; }
+      .project-description.theme-1 .text-block small span, .project-description.theme-1 .text-block small a span {
+        margin-left: 15px;
+        margin-right: 15px; }
+      .project-description.theme-1 .text-block small a, .project-description.theme-1 .text-block small a a {
+        display: inline-block;
+        color: #F9024D; }
     .project-description.theme-1 .text-block h1 {
-      margin-top: 30px;
-      padding: 10px 20px;
-      font-size: 60px;
+      margin-top: 28px;
+      font-size: 75px;
+      text-transform: uppercase;
       font-weight: 800;
-      color: white;
-      margin-bottom: 40px;
-      background: #2ae690;
+      font-family: 'Teko', sans-serif;
+      color: black;
+      margin-bottom: 8px;
       line-height: 1em;
       display: inline-block; }
+      .project-description.theme-1 .text-block h1 + small {
+        margin-bottom: 15px;
+        display: block;
+        color: #FA4065; }
     .project-description.theme-1 .text-block p.disciplines {
       font-size: 14px;
       font-weight: 800;
       text-transform: uppercase;
-      padding-top: 30px; }
+      padding-top: 25px;
+      color: #999; }
       .project-description.theme-1 .text-block p.disciplines span {
-        position: relative; }
+        position: relative;
+        font-family: 'Teko', sans-serif;
+        letter-spacing: 1.5px; }
         .project-description.theme-1 .text-block p.disciplines span:after {
           content: '';
           position: absolute;
           border-bottom: 10px solid rgba(248, 221, 28, 0.3);
           margin-top: -5px;
           width: 100%;
-          bottom: -6px;
+          bottom: 0px;
           left: 0; }
   .project-description.theme-1 .img-block {
-    padding-top: 30px; }
-    .project-description.theme-1 .img-block img {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
+    .project-description.theme-1 .img-block div {
       position: absolute;
-      right: 0px;
-      bottom: -999px;
-      transition: bottom .4s ease, opacity .4s ease;
-      position: absolute;
-      opacity: 0; }
-      .project-description.theme-1 .img-block img.project-animate {
-        position: relative;
-        bottom: 0;
-        opacity: 1; }
+      transform: translateY(0%);
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      opacity: 0;
+      width: 100%;
+      flex-direction: column;
+      transition: 0.8s ease;
+      transition-delay: 0.5s; }
+      .project-description.theme-1 .img-block div h4 {
+        color: white;
+        font-family: lato, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 0px 2px 10px rgba(1, 1, 1, 0.1);
+        border-bottom: 1px solid #fff;
+        line-height: 1em;
+        padding-bottom: 35px;
+        padding-right: 20px;
+        text-align: right;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        box-shadow: 0px 2px 10px rgba(1, 1, 1, 0.1);
+        max-width: 100%;
+        margin-top: auto; }
+      .project-description.theme-1 .img-block div p {
+        font-size: 14px;
+        padding-right: 20px;
+        color: white;
+        font-weight: 300;
+        text-shadow: 2px 10px rgba(1, 1, 1, 0.1);
+        text-align: right;
+        letter-spacing: 0.5px;
+        margin-bottom: 1rem; }
     .project-description.theme-1 .img-block a {
       display: block;
+      position: relative;
       text-align: right;
-      color: #30D287; }
-  .project-description.skillset h1 {
-    background-color: #F9024D !important; }
+      color: #30D287;
+      transition: 2.5s ease;
+      overflow: hidden;
+      border-radius: 3px;
+      padding: 0; }
+      .project-description.theme-1 .img-block a:hover img {
+        transform: scale(1.05); }
+      .project-description.theme-1 .img-block a img {
+        position: absolute;
+        right: 0px;
+        opacity: 0;
+        width: 100%;
+        height: auto;
+        transition: 1.5s ease;
+        border-radius: 3px;
+        -webkit-filter: blur(5px);
+        /* Safari */
+        filter: blur(5px); }
+        .project-description.theme-1 .img-block a img.project-animate {
+          position: relative;
+          opacity: 1;
+          -webkit-filter: blur(0px);
+          /* Safari */
+          filter: blur(0px); }
+          .project-description.theme-1 .img-block a img.project-animate + div {
+            opacity: 1;
+            transform: translateY(-100%); }
   .project-description.skillset p {
     max-width: 800px; }
   .project-description.skillset h4 {
@@ -70,17 +137,45 @@ p {
     font-weight: 800;
     font-size: 18px; }
 
+section.more-projects .clearfix {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 150px;
+  border-bottom: 1px solid #eee; }
+  section.more-projects .clearfix .col > a {
+    line-height: 3em;
+    padding-right: 0px;
+    text-align: right;
+    display: inline-block;
+    float: right;
+    height: 100%;
+    width: 100%; }
+    section.more-projects .clearfix .col > a:hover {
+      text-decoration: none; }
+    section.more-projects .clearfix .col > a p {
+      color: #0076FF;
+      font-weight: bold;
+      text-align: right;
+      margin-bottom: 0; }
+      section.more-projects .clearfix .col > a p i {
+        margin-left: 20px; }
+  section.more-projects .clearfix .col {
+    width: 100%; }
+
 header.header1 {
   height: 80px; }
   header.header1 .container .row {
     display: flex;
     justify-content: space-between; }
     header.header1 .container .row .logo h3 {
-      font-size: 28px;
+      font-size: 23px;
       padding-top: 32px;
-      font-weight: 700;
-      color: #c4c4c4;
+      font-weight: 800;
+      color: #f9024d;
       letter-spacing: -1px; }
+      header.header1 .container .row .logo h3 span {
+        font-weight: 400;
+        padding-right: 2px; }
     header.header1 .container .row nav {
       padding-top: 28px; }
       header.header1 .container .row nav ul {
@@ -99,12 +194,12 @@ header.header1 {
             left: 0;
             top: 0;
             z-index: -1;
-            transition: .5s width; }
+            transition: .3s width; }
           header.header1 .container .row nav ul li:hover:after {
             background-color: #eee;
             width: 100%; }
           header.header1 .container .row nav ul li a {
-            color: #2ae690;
+            color: #999;
             font-size: 14px;
             font-weight: 600;
             padding: 10px 20px;
@@ -115,20 +210,23 @@ header.header1 {
               color: #444444; }
 
 .container-fluid.hero {
-  /*background-image: url('http://localhost:4100//portfolio/assets/images/hero.jpg');*/
+  /*background-image: url('http://localhost:4000//portfolio/assets/images/hero.jpg');*/
   display: flex;
-  height: calc( 100vh - 80px );
-  max-height: 900px;
-  align-items: center; }
+  height: 582px;
+  align-items: center;
+  background: #fafafa;
+  margin-bottom: 50px; }
   .container-fluid.hero div.container {
     position: relative; }
     .container-fluid.hero div.container h1 {
       font-weight: 800;
       font-size: 105px;
       margin-bottom: 50px;
-      color: #111111;
+      line-height: 1em;
+      color: #FA4065;
       letter-spacing: -1px;
-      display: block; }
+      display: block;
+      font-family: 'Teko', sans-serif; }
     .container-fluid.hero div.container p {
       max-width: 750px;
       color: #111111;
@@ -136,36 +234,80 @@ header.header1 {
       display: block;
       line-height: 1.6em; }
 
-.progress-element .progress {
-  margin-bottom: 20px;
-  text-align: left;
-  text-indent: 60px;
-  border-radius: 1px; }
-  .progress-element .progress .progress-bar {
-    height: 30px;
-    width: 0%;
-    line-height: 2.6em;
-    background: red;
-    letter-spacing: 1px;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eecda3+0,f9024d+100 */
-    background: #eecda3;
-    /* Old browsers */
-    background: -moz-linear-gradient(left, #eecda3 0%, #f9024d 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #eecda3 0%, #f9024d 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #eecda3 0%, #f9024d 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecda3', endColorstr='#f9024d',GradientType=1 );
-    /* IE6-9 */
-    transition: width 1.5s ease; }
-  .progress-element .progress:nth-of-type(1) .progress-bar.grow {
-    width: 90%; }
-  .progress-element .progress:nth-of-type(2) .progress-bar.grow {
-    width: 90%; }
-  .progress-element .progress:nth-of-type(3) .progress-bar.grow {
-    width: 90%; }
-  .progress-element .progress:nth-of-type(4) .progress-bar.grow {
-    width: 70%; }
-  .progress-element .progress:nth-of-type(5) .progress-bar.grow {
-    width: 50%; }
+.progress-element {
+  max-width: 900px; }
+  .progress-element .progress {
+    margin-bottom: 20px;
+    text-align: left;
+    text-indent: 60px;
+    border-radius: 1px; }
+    .progress-element .progress .progress-bar {
+      height: 30px;
+      font-weight: bold;
+      width: 0%;
+      line-height: 2.6em;
+      background: red;
+      letter-spacing: 1px;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eecda3+0,f9024d+100 */
+      background: #eecda3;
+      /* Old browsers */
+      background: -moz-linear-gradient(left, #eecda3 0%, #f9024d 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #eecda3 0%, #f9024d 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #eecda3 0%, #f9024d 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eecda3', endColorstr='#f9024d',GradientType=1 );
+      /* IE6-9 */
+      transition: width 1.5s ease;
+      text-shadow: 0px 0px 10px rgba(1, 1, 1, 0.1); }
+    .progress-element .progress:nth-of-type(1) .progress-bar.grow {
+      width: 90%; }
+    .progress-element .progress:nth-of-type(2) .progress-bar.grow {
+      width: 90%; }
+    .progress-element .progress:nth-of-type(3) .progress-bar.grow {
+      width: 90%; }
+    .progress-element .progress:nth-of-type(4) .progress-bar.grow {
+      width: 70%; }
+    .progress-element .progress:nth-of-type(5) .progress-bar.grow {
+      width: 50%; }
+
+#project-page .project-title {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #project-page .project-title h1 {
+    width: 100%;
+    font-weight: 800;
+    font-size: 55px; }
+  #project-page .project-title h5 {
+    color: gray; }
+#project-page .project-hero {
+  width: 100%;
+  height: 500px;
+  background-image: url("../assets/images/easy-road.jpg");
+  background-size: cover; }
+#project-page .sticky-column {
+  padding-top: 100px; }
+  #project-page .sticky-column h3 {
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #F9024D; }
+  #project-page .sticky-column .d-flex {
+    display: flex; }
+  #project-page .sticky-column .p-rel {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    height: 100%; }
+  #project-page .sticky-column .sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    top: 0;
+    padding-left: 0;
+    padding-right: 15px;
+    width: 100%;
+    max-width: 520px;
+    height: 100px; }

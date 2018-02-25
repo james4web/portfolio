@@ -4,7 +4,7 @@ exclude: ['README.md']
 sass:
     sass_dir: _scss
 # deployment
-port: 4100
+port: 4000
 defaults:
   - scope:
       path: "assets/img"
