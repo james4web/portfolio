@@ -198,6 +198,8 @@ header.header1 {
           header.header1 .container .row nav ul li:hover:after {
             background-color: #eee;
             width: 100%; }
+          header.header1 .container .row nav ul li#contact {
+            border: 1px solid red; }
           header.header1 .container .row nav ul li a {
             color: #999;
             font-size: 14px;
