@@ -3,7 +3,7 @@ $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
      //>=, not <=
-    if (scroll >= 80) {
+    if (scroll >= 150) {
         //clearHeader, not clearheader - caps H
         $(".project-1 img").addClass("project-animate");
     }
@@ -12,7 +12,7 @@ $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
      //>=, not <=
-    if (scroll >= 650) {
+    if (scroll >= 1150) {
         //clearHeader, not clearheader - caps H
         $(".project-2 img").addClass("project-animate");
     }
