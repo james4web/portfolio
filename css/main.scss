@@ -89,6 +89,7 @@ header {
                     a {
                         svg {
                             height: 30px !important;
+                            transition: all 1s;
                             &:hover {
                                 -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
                                 filter: grayscale(100%);
@@ -153,6 +154,7 @@ header {
             h1 {
                 width: 100%;
                 font-weight: 800;
+                font-size: 65px;
             }
             h5 {
                 color: lighten($color3, 50%);
@@ -179,7 +181,7 @@ header {
         padding-top: 10px;
         // margin-top: 50px;
         margin-bottom: 10px;
-        font-size: 20px;
+        font-size: 18px;
         color: black;
       }
       .d-flex {
@@ -298,7 +300,7 @@ header {
         text-align: left !important;
         h1 {
           font-weight: 900;
-          font-size: 125px;
+          font-size: 100px;
           margin-top: -120px;
           margin-bottom: 0;
           line-height: 1em;
@@ -306,12 +308,12 @@ header {
           display: block;
           animation-name: hero;
           animation-duration: 1s;
-          letter-spacing: -5px;
+          letter-spacing: -2px;
         }
         p:nth-of-type(1) {
             max-width: 750px;
             color: darken( $bodyText, 40%);
-            font-size: 22px;
+            font-size: 18px;
             margin-top: 30px;
             display: block;
             line-height: 1.6em;
@@ -332,7 +334,7 @@ header {
             animation-duration: 1s;
             max-width: 780px; 
             margin-bottom: 80px; 
-            font-size: 20px;
+            font-size: 18px;
             color: #111;
         }
         ul {

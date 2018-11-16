@@ -55,7 +55,8 @@ header.header1 {
     header.header1 .container .row .logo {
       margin-top: 20px; }
       header.header1 .container .row .logo a svg {
-        height: 30px !important; }
+        height: 30px !important;
+        transition: all 1s; }
         header.header1 .container .row .logo a svg:hover {
           -webkit-filter: grayscale(100%);
           /* Safari 6.0 - 9.0 */
@@ -100,7 +101,8 @@ header.header1 {
       width: 100%; }
       #project-page .project-title .project-text h1 {
         width: 100%;
-        font-weight: 800; }
+        font-weight: 800;
+        font-size: 65px; }
       #project-page .project-title .project-text h5 {
         color: gray; }
   #project-page .project-hero {
@@ -118,7 +120,7 @@ header.header1 {
       font-weight: 900;
       padding-top: 10px;
       margin-bottom: 10px;
-      font-size: 20px;
+      font-size: 18px;
       color: black; }
     #project-page .sticky-column .d-flex {
       display: flex; }
@@ -226,7 +228,7 @@ header.header1 {
     text-align: left !important; }
     .container-fluid.hero div.container h1 {
       font-weight: 900;
-      font-size: 125px;
+      font-size: 100px;
       margin-top: -120px;
       margin-bottom: 0;
       line-height: 1em;
@@ -234,11 +236,11 @@ header.header1 {
       display: block;
       animation-name: hero;
       animation-duration: 1s;
-      letter-spacing: -5px; }
+      letter-spacing: -2px; }
     .container-fluid.hero div.container p:nth-of-type(1) {
       max-width: 750px;
       color: #111111;
-      font-size: 22px;
+      font-size: 18px;
       margin-top: 30px;
       display: block;
       line-height: 1.6em;
@@ -256,7 +258,7 @@ header.header1 {
       animation-duration: 1s;
       max-width: 780px;
       margin-bottom: 80px;
-      font-size: 20px;
+      font-size: 18px;
       color: #111; }
     .container-fluid.hero div.container ul {
       margin-top: 35px;
