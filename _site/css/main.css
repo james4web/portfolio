@@ -159,34 +159,6 @@ header.header1 {
 .homepage .header1 {
   background: #fff; }
 
-/*animated scroll arrow animation*/
-@-webkit-keyframes ca3_fade_move_down {
-  0% {
-    -webkit-transform: translate(0, -20px);
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    -webkit-transform: translate(0, 20px);
-    opacity: 0; } }
-@-moz-keyframes ca3_fade_move_down {
-  0% {
-    -moz-transform: translate(0, -20px);
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    -moz-transform: translate(0, 20px);
-    opacity: 0; } }
-@keyframes ca3_fade_move_down {
-  0% {
-    transform: translate(0, -20px);
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    transform: translate(0, 20px);
-    opacity: 0; } }
 .container-fluid.hero {
   /*background-image: url('http://localhost:4000//portfolio/assets/images/hero.jpg');*/
   display: flex;
@@ -229,7 +201,7 @@ header.header1 {
     .container-fluid.hero div.container h1 {
       font-weight: 900;
       font-size: 100px;
-      margin-top: -50px;
+      margin-top: -20px;
       margin-bottom: 0;
       line-height: 1em;
       color: color("black");
@@ -257,7 +229,7 @@ header.header1 {
       animation-name: hero;
       animation-duration: 1s;
       max-width: 780px;
-      margin-bottom: 80px;
+      margin-bottom: 30px;
       font-size: 18px;
       color: #111; }
     .container-fluid.hero div.container ul {
