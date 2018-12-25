@@ -320,13 +320,8 @@ header {
                     img {
                         width: 30px;
                         height: 30px;
-                        -webkit-transition: transform 2s; /* Safari */
-                        transition: transform 0.1s;
                     }
-                    &:hover img {
-                        -webkit-transform: translateY(-3px);
-                        transform: translateY(-3px);
-                    }
+
                 }
             }
         }
@@ -342,10 +337,9 @@ header {
                 height: 350px;
                 border: 1px solid #eee !important;
                 overflow: hidden;
-                transition: all .3s ease-out;
+                transition: all .2s ease-out;
                 background-color: white;
                 &:hover {
-                    transform: translateY(-5px);
                     box-shadow: 0 7px 25px rgba(1,1,1,.08);
                 }
                 a {
@@ -355,6 +349,12 @@ header {
                     text-decoration: none !important;
                     display: flex;
                     overflow: hidden;
+                    @media (max-width: 900px) {
+                        flex-direction: column;
+                        .col-md-6 {
+                            max-width: 100%;
+                        }
+                    }
                 }
                 .col-md-6 {
                     padding: 0;
@@ -397,7 +397,7 @@ header {
                         }
                         .description {
                             display: block;
-                            color: darken( $bodyText, 10%);
+                            color: lighten( $bodyText, 10%);
                             font-size: 15px;
                             padding-bottom: 20px;
                             // font-style: italic;
