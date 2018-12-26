@@ -7,6 +7,22 @@
 .mb50 {
   margin-bottom: 50px !important; }
 
+.link {
+  color: black !important;
+  text-decoration: none !important;
+  border: 1px solid black;
+  padding: .7em 1em; }
+  .link:after {
+    display: inline-block;
+    content: "\f061";
+    font-weight: 300;
+    font-family: 'FontAwesome';
+    margin-left: 10px;
+    transition: all .1s;
+    transform: translateX(0); }
+  .link:hover:after {
+    transform: translateX(3px); }
+
 body {
   background-color: #f1f1f1; }
 
@@ -29,8 +45,8 @@ h1 {
     margin-left: -5px; }
 
 h5 {
-  font-size: 1.05rem;
-  font-weight: 700; }
+  font-size: 1.25rem;
+  font-weight: 500; }
 
 .boxta {
   opacity: var(--opacity);
@@ -117,11 +133,13 @@ header.header1 {
     #project-page .sticky-column img {
       width: 100%; }
     #project-page .sticky-column h5 {
-      font-weight: 900;
+      font-weight: 700;
       padding-top: 10px;
       margin-bottom: 10px;
-      font-size: 18px;
-      color: black; }
+      font-size: 14px;
+      color: black;
+      text-transform: uppercase;
+      letter-spacing: .5px; }
     #project-page .sticky-column .d-flex {
       display: flex; }
     #project-page .sticky-column .p-rel {
@@ -141,7 +159,7 @@ header.header1 {
       width: 100%;
       max-width: 520px;
       height: 100px;
-      padding-top: 50px; }
+      padding-top: 0px; }
 
 .non-sticky {
   position: static !important; }
