@@ -7,7 +7,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-130195993-1');
     </script>
     <meta charset="UTF-8">
@@ -15,6 +14,14 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="/css/main.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
     
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/apple-icon-60x60.png">
@@ -37,82 +44,104 @@
 </head>
 
 <body>
-<section class="homepage">
-<header class="header1">
-    <div class="container">
-        <div class="row">
-            <div class="logo">
-                <a href="index.html"><svg width="56px" height="48px" viewBox="0 0 56 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
-                    <title>Page 1</title>
-                    <desc>Created with Sketch.</desc>
-                    <defs></defs>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g id="Desktop-HD-Copy-26" transform="translate(-144.000000, -37.000000)">
-                            <g id="Page-1" transform="translate(144.000000, 37.000000)">
-                                <polygon id="Fill-1" fill="#EA4065" points="14.3822 48 31.7513 48 31.7513 0 14.3822 0"></polygon>
-                                <polygon id="Fill-2" fill="#EA4065" points="14.3822 48 31.7513 48 31.7513 0 14.3822 0"></polygon>
-                                <polygon id="Fill-3" fill="#FA8B63" points="5.2069 13.1881 14.5538 13.1881 14.5538 0 5.2069 0"></polygon>
-                                <polygon id="Fill-4" fill="#FAA263" points="5.2069 13.1881 14.5538 13.1881 14.5538 0 5.2069 0"></polygon>
-                                <polygon id="Fill-5" fill="#FA6965" points="0 48 14.4 48 14.4 34.8119 0 34.8119"></polygon>
-                                <polygon id="Fill-6" fill="#FA7A65" points="0 48 14.4 48 14.4 34.8119 0 34.8119"></polygon>
-                                <path d="M31.6759,0 C44.915,0.0081 55.6609,10.759 55.6609,24 C55.6609,37.241 44.915,47.9919 31.6759,47.9999 L31.6759,0 Z" id="Fill-7" fill="#FF4065"></path>
-                                <path d="M31.6759,13.349 C37.4922,13.4221 42.1916,18.1666 42.1916,24 C42.1916,29.8334 37.4922,34.5779 31.6759,34.651 L31.6759,13.349 Z" id="Fill-8" fill="#FFFFFF"></path>
-                                <path d="M31.6759,13.349 C37.4922,13.4221 42.1916,18.1666 42.1916,24 C42.1916,29.8334 37.4922,34.5779 31.6759,34.651 L31.6759,13.349 Z" id="Fill-9" fill="#FFFFFF"></path>
-                            </g>
-                        </g>
-                    </g>
-                </svg></a>
+<div class="homepage">
+<section class="intro-section">
+    <div class="full-height container-fluid hero">
+        <div class="bg"></div>
+        <div class="grid">
+            <div class="line-parent">
+                <div class="line-element"></div>
             </div>
-            <nav>
-                <ul>
-                    <!-- <li><a href="easy-road.html">My Work</a></li> -->
-                    <li id="contact"><a href="mailto:jdoran90@gmail.com">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="line-parent">
+                <div class="line-element"></div>
+            </div>
+            <div class="line-parent">
+                <div class="line-element"></div>
+            </div>
+            <div class="line-parent">
+                <div class="line-element"></div>
+            </div>
+            <div class="line-parent">
+                <div class="line-element"></div>
+            </div>
+            <div class="line-parent">
+                <div class="line-element"></div>
+            </div>
+            
+        </div>
+        <div class="contact-parent">
+            <a href="" class="contact">Contact<svg id="envelope" width="60px" height="43px" viewBox="0 0 60 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>envelope-closed</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Communication" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon-2" transform="translate(0.000000, -17.000000)" fill="#FBCD25" stroke="#FBCD25">
+            <path d="M60,28 L60,55 C60,57.757 57.757,60 55,60 L5,60 C2.243,60 0,57.757 0,55 L0,28 C0,27.448 0.448,27 1,27 C1.552,27 2,27.448 2,28 L2,55 C2,56.654 3.346,58 5,58 L55,58 C56.654,58 58,56.654 58,55 L58,28 C58,27.448 58.448,27 59,27 C59.552,27 60,27.448 60,28 L60,28 Z M0.377,23.782 C0.139,23.592 0,23.305 0,23 C0,20.243 2.243,18 5,18 L55,18 C57.757,18 60,20.243 60,23 C60,23.304 59.862,23.591 59.624,23.781 L33.667,44.531 C33.486,44.678 31.802,46 30,46 C28.206,46 26.537,44.627 26.352,44.471 L0.377,23.782 L0.377,23.782 Z M2.034,22.545 L27.623,42.926 C27.995,43.238 29.099,44 30,44 C30.929,44 32.058,43.258 32.414,42.972 L57.966,22.546 C57.747,21.107 56.5,20 55,20 L5,20 C3.5,20 2.254,21.106 2.034,22.545 L2.034,22.545 Z M18.382,41.214 L4.382,52.214 C3.948,52.555 3.873,53.184 4.214,53.618 C4.411,53.869 4.704,54 5,54 C5.217,54 5.435,53.93 5.618,53.786 L19.618,42.786 C20.052,42.445 20.127,41.816 19.786,41.382 C19.445,40.947 18.816,40.873 18.382,41.214 L18.382,41.214 Z M40.214,41.382 C39.873,41.816 39.948,42.445 40.382,42.786 L54.382,53.786 C54.565,53.93 54.783,54 54.999,54 C55.295,54 55.589,53.869 55.786,53.618 C56.127,53.184 56.052,52.555 55.618,52.214 L41.618,41.214 C41.184,40.873 40.555,40.948 40.214,41.382 L40.214,41.382 Z" id="envelope-closed"></path>
+        </g>
+    </g>
+</svg></a>
+        </div>
+        <div class="title-main">
+            <div class="type-js headline">
+                <h1 class="text-js">Hello</h1>
+            </div>
+            <p class="descriptor">My name is <span>James</span>, and I am a <span>designer</span> who <span>codes</span class="period"></p>
+        </div>
+        <div class="arrow-parent">
+            <svg class="hero-arrow" width="53px" height="309px" viewBox="0 0 53 309" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1050.000000, -534.000000)">
+            <g id="Group-2" transform="translate(1051.000000, 535.000000)">
+                <path class="arrow-lines" d="M25.5,1 L25.5,305.5" id="Line-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill-rule="nonzero"></path>
+                <path class="arrow-lines" d="M25.5,306.5 L0.751262658,281.751263" id="Line-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill-rule="nonzero"></path>
+                <path class="arrow-lines" d="M25.5,306.5 L50.2487373,281.751263" id="Line-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill-rule="nonzero"></path>
+                <circle id="oval" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero" cx="25.5" cy="2.5" r="2.5"></circle>
+                <text id="work" transform="translate(39.500000, 138.000000) rotate(90.000000) translate(-39.500000, -138.000000) " font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="12" font-weight="400" fill="#FFFFFF">
+                    <tspan x="24.5" y="142.5">Work</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
         </div>
     </div>
-</header>
-
-<section class="container-fluid hero">
-    <div class="container">
-        <div class="type-js headline">
-            <h1 class="text-js">Hello!</h1>
+</section>
+<section>
+    <div class="section-2 full-height">
+        <div class="s-inner">
+            <p>this is the intro text</p>
         </div>
-        <p>Designer<span>•</span>Developer<span>•</span>User Experience</p>
-        <p class="blurb">My name is James. I am a product designer and front-end developer. Really my job is to solve problems and create experiences which are useful, intuitive and beautiful. I am currently working at eBay on their Sitebuilder tool and various projects.</p>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/james-doran-6361542b" target="_blank"><img src="assets/images/linkedin.png" alt=""></a></li>
-            <li style="display: none;"><a href="#"><img src="assets/images/codepen.png" alt=""></a></li>
-            <li style="display: none;"><a href="#"><img src="assets/images/dribbble.png" alt=""></a></li>
-        </ul>
     </div>
-    <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
 </section>
 
 </section>
 <!-- eBay -->
 <section class="project-description theme-2 ebay">
-        <div class="container">
-            <div class="row">
-                <a href="" style="pointer-events: none;">
-                    <div class="col-md-6">
-                        <div class="text-block">
-                            <small class="category">2019<span>•</span>Design & Dev</small>
-                            <h1 class="boxta">eBay Work</h1>
-                            <small class="description">Coming Soon!</small>
-                            <p>A UX Exploration of a Travel App that collects and curates crowd sourced data, providing real and actionable advice to potential travelers.</p>
-                        </div>
+    <div class="container">
+        <div class="row">
+            <a href="" style="pointer-events: none;">
+                <div class="col-md-6">
+                    <div class="text-block">
+                        <small class="category">2019<span>•</span>Design & Dev</small>
+                        <h1 class="boxta">eBay Work</h1>
+                        <small class="description">Coming Soon!</small>
+                        <p>A UX Exploration of a Travel App that collects and curates crowd sourced data, providing real and actionable advice to potential travelers.</p>
                     </div>
-                    <div class="col-md-6">
-                        <div class="img-block">
-                                <img src="assets/images/ebay.png">
-                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-block">
+                            <img src="assets/images/ebay.png">
                     </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
-    </section>
+    </div>
+</section>
 <br>
 <br>
 
@@ -240,14 +269,11 @@
 </section>
 <br>
 <br>
+</div>
 
+</body>
 <footer>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="bower_components/basicScroll/dist/basicScroll.min.js"></script>
     <script src="/js/main.js"></script>
 </footer>
 
-</body>
 </html>

@@ -1,0 +1,19 @@
+<svg class="hero-arrow" width="53px" height="309px" viewBox="0 0 53 309" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-1050.000000, -534.000000)">
+            <g id="Group-2" transform="translate(1051.000000, 535.000000)">
+                <path class="arrow-lines" d="M25.5,1 L25.5,305.5" id="Line-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill-rule="nonzero"></path>
+                <path class="arrow-lines" d="M25.5,306.5 L0.751262658,281.751263" id="Line-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill-rule="nonzero"></path>
+                <path class="arrow-lines" d="M25.5,306.5 L50.2487373,281.751263" id="Line-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" fill-rule="nonzero"></path>
+                <circle id="oval" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero" cx="25.5" cy="2.5" r="2.5"></circle>
+                <text id="work" transform="translate(39.500000, 138.000000) rotate(90.000000) translate(-39.500000, -138.000000) " font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="12" font-weight="400" fill="#FFFFFF">
+                    <tspan x="24.5" y="142.5">Work</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -14,13 +14,15 @@ $color: #093261;
 $color2: white;
 $color3: black;
 
+
+
 // Removes white background on image
 .blend-multiply {
     mix-blend-mode: multiply;
 }
 
 * {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'helvetica neue',helvetica, arial, sans-serif;
 }
 
 .mb50 {
@@ -30,8 +32,11 @@ $color3: black;
 .link {
     color: black !important;
     text-decoration: none !important;
-    border: 1px solid black;
-    padding: .7em 1em;
+    border-bottom: 3px solid #ff3f64;
+    line-height: 1em;
+    padding-bottom: .3em;
+    font-weight: 600;
+    font-size: 15px;
     &:after {
         display: inline-block;
         content: "\f061";
@@ -39,7 +44,8 @@ $color3: black;
         font-family: 'FontAwesome'; 
         margin-left: 10px;  
         transition: all .1s;
-        transform: translateX(0);          
+        transform: translateX(0);  
+        font-size: 13px;        
     }
     &:hover {
         &:after {
@@ -77,14 +83,6 @@ h5 {
     font-weight: 500;
 }
 
-
-.boxta{
-    opacity: var(--opacity);
-   transform: translateX(var(--transx));
-   transition: transform .1s linear;
-   will-change: opacity;
-}
-
 .dark-text {
     color: #333 !important;
 }
@@ -96,6 +94,22 @@ h5 {
   STRUCTURE
 ===========================================================*/
 
+// Animated hero
+.full-height {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.title-main {
+    text-align: left;
+    overflow: hidden;
+}
+.s-inner {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
 
 // header styles
 header {
@@ -134,23 +148,17 @@ header {
                                 }
                             }
                             &#contact {
+                                overflow: hidden;
                                 a {
-                                    color:#555;
-                                    line-height: 2.7em;
-                                    height: 100%;
-                                    width: 100%;
-                                    background-color: #fff;
-                                    box-shadow: 0 3px 15px rgba(1,1,1,0.1);
-                                    padding: 9px 20px;
-                                    border-radius: 2px;
+                                    color:#111;
+                                    border-bottom: 2px solid #eb3d63;
                                     font-weight: 600;
-                                    font-size: 0.9em;
+                                    font-size: 1em;
                                     text-decoration: none !important;
-                                    transition: .3s all;
+                                    transition: .2s all;
                                     &:hover {
-                                        text-decoration: none !important;
-                                        background-color: #eb3d63;
-                                        color: #fff;
+                                        // padding-bottom: 1px;
+                                        color: #eb3d63;
                                     }
                                 }
                             }
@@ -244,106 +252,136 @@ header {
   HOMEPAGE
 ===========================================================*/
 
-@keyframes hero {
-    0% {transform:translate(0,500px);opacity:0;}
-    100% {transform:translate(0,0);opacity:1;}
-}
-
-.homepage {
-    .header1 {
-        background: #fff;
-    }
-}
-
-
 
 // hero styles
 .container-fluid.hero {
     display: flex;
-    height: calc(100vh - 80px);
-    align-items: center;
-    background: #fff;
+    height: 100vh;
+    padding-left: 0;
+    padding-right: 0;
     margin-bottom: 100px;
-
-    .ca3-scroll-down-arrow {
-        background-image: url(../assets/images/arrow.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        fill: red;
-    }
-
-    .ca3-scroll-down-link {
-    cursor:pointer;
-        height: 25px;
-        fill: red;
-        width: 80px;
-        margin: 0px 0 0 -40px;
-        line-height: 60px;
+    .bg {
         position: absolute;
-        left: 50%;
-        bottom: 30px;
-        color: #FFF;
-        text-align: center;
-        font-size: 70px;
-        z-index: 100;
-        text-decoration: none;
-        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+        background-color: #111;
+        width: 100%;
+        height: 100%;
     }
-    div.container {
+    .grid {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        .line-parent {
+            height: 100%;
+            display: flex;
+            position: absolute;
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+            &:nth-child(2) {
+                margin-left: 16.6vw;
+            }
+            &:nth-child(3) {
+                margin-left: 33.2vw;
+            }
+            &:nth-child(4) {
+                margin-left: 49.8vw;
+            }
+            &:nth-child(5) {
+                margin-left: 66.4vw;
+            }
+            &:nth-child(6) {
+                margin-left: 83vw;
+            }
+            .line-element {
+                background-color: #333;
+                width: 1px;
+                height: 100%;
+            }
+        }
+    }
+    .arrow-parent {
+        position: absolute;
+        margin-top: 50.3vh;
+        margin-left: calc(16.6vw + 703px);
+        overflow: hidden;
+        .hero-arrow {
+            opacity: 0;
+            svg #work, svg .arrow-lines {
+                opacity: 0;
+            }
+            circle {
+                fill: white;
+            }
+        }
+    }
+    .contact-parent {
+        overflow: hidden;
+        position: absolute;
+        top: 30px;
+        left: 83.1%;
+        width: 300px;
+        height: 100px;
+        .contact {
+            color: white;
+            font-size: 14px;
+            font-weight: 800;
+            position: absolute;
+            border-bottom: 2px solid #FBCD25;
+            padding-right: 25px;
+            transition: 1s;
+            svg {
+                transform: scale(.35);
+                display:none;
+                position: absolute;
+                top: -13px;
+                left: 50px;
+                stroke-width: 5px;
+            }
+            &:hover {
+                padding-right: 42px;
+                text-decoration: none;
+                svg {
+                    display: inline-block;
+                }
+
+            }
+        }
+    }
+    
+    .title-main {
         position: relative;
         text-align: left !important;
+        margin-left: 16.6vw;
+        margin-top: calc(50vh - 188px);
         h1 {
           font-weight: 900;
-          font-size: 100px;
+          font-size: 150px;
           margin-top: -20px;
           margin-bottom: 0;
           line-height: 1em;
-          color: color('black');
+          color: white;
           display: block;
-          animation-name: hero;
-          animation-duration: 1s;
           letter-spacing: -2px;
         }
-        p:nth-of-type(1) {
+        p {
+            display: flex;
             max-width: 750px;
-            color: darken( $bodyText, 40%);
-            font-size: 18px;
+            color: white;
+            font-size: 30px;
             margin-top: 30px;
             display: block;
             line-height: 1.6em;
             font-weight: 900;
-            animation-name: hero;
-            animation-duration: 1s;
             font-family: 'helvetica', sans-serif;
             span {
-                margin: 0 20px;
-                color: $pink;
-            }
-        }
-        p:nth-of-type(2) {
-            max-width: 650px;
-            margin-top: 35px;
-            animation-name: hero;
-            animation-duration: 1s;
-            max-width: 780px; 
-            margin-bottom: 30px; 
-            font-size: 18px;
-            color: #111;
-        }
-        ul {
-            margin-top: 35px;
-            padding-left: 0;
-            animation-name: hero;
-            animation-duration: 1s;
-            li {
-                display: inline-block;
-                margin-right: 3px;
-                a {
-                    img {
-                        width: 30px;
-                        height: 30px;
-                    }
-
+                &:nth-child(1) {
+                    color: #FCF2BD;
+                }
+                &:nth-child(2) {
+                    color: #F7E376;
+                }
+                &:nth-child(3) {
+                    color: #FBCD25;
                 }
             }
         }
@@ -408,8 +446,6 @@ header {
                         }
                         h1 {
                             font-size: 48px;
-                            // font-family: 'Playfair Display', serif;
-                            font-family: 'Source Sans Pro', sans-serif;
                             margin-top: 30px;
                             margin-bottom: 14px;
                             font-weight: 900;
@@ -550,7 +586,4 @@ header {
         }
     }
 }
-
-
-
 

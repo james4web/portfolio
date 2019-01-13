@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1024px" viewBox="0 0 1440 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Desktop-HD" fill-rule="nonzero" stroke="#222222">
+            <g id="Group" transform="translate(0.000000, -1.000000)">
+                <path d="M1438.83333,0.5 L1438.83333,1025.5" id="end"></path>
+                <path d="M1198.83333,1.5 L1198.83333,1026.5" id="line5"></path>
+                <path d="M959.166667,0.5 L959.166667,1025.5" id="line4"></path>
+                <path d="M719.5,0.5 L719.5,1025.5" id="line3"></path>
+                <path d="M479.833333,0.5 L479.833333,1025.5" id="line2"></path>
+                <path d="M240.166667,0.5 L240.166667,1025.5" id="line1"></path>
+                <path d="M1.16666667,1.5 L1.16666667,1026.5" id="start"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -2,7 +2,7 @@
   mix-blend-mode: multiply; }
 
 * {
-  font-family: 'Source Sans Pro', sans-serif; }
+  font-family: 'helvetica neue',helvetica, arial, sans-serif; }
 
 .mb50 {
   margin-bottom: 50px !important; }
@@ -10,8 +10,11 @@
 .link {
   color: black !important;
   text-decoration: none !important;
-  border: 1px solid black;
-  padding: .7em 1em; }
+  border-bottom: 3px solid #ff3f64;
+  line-height: 1em;
+  padding-bottom: .3em;
+  font-weight: 600;
+  font-size: 15px; }
   .link:after {
     display: inline-block;
     content: "\f061";
@@ -19,7 +22,8 @@
     font-family: 'FontAwesome';
     margin-left: 10px;
     transition: all .1s;
-    transform: translateX(0); }
+    transform: translateX(0);
+    font-size: 13px; }
   .link:hover:after {
     transform: translateX(3px); }
 
@@ -48,12 +52,6 @@ h5 {
   font-size: 1.25rem;
   font-weight: 500; }
 
-.boxta {
-  opacity: var(--opacity);
-  transform: translateX(var(--transx));
-  transition: transform .1s linear;
-  will-change: opacity; }
-
 .dark-text {
   color: #333 !important; }
 
@@ -63,6 +61,21 @@ h5 {
 /*===========================================================
   STRUCTURE
 ===========================================================*/
+.full-height {
+  height: 100vh;
+  width: 100vw;
+  position: relative; }
+
+.title-main {
+  text-align: left;
+  overflow: hidden; }
+
+.s-inner {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
 header.header1 {
   height: 80px; }
   header.header1 .container .row {
@@ -89,23 +102,17 @@ header.header1 {
           header.header1 .container .row nav ul li:hover:after {
             background-color: #eee;
             width: 100%; }
-          header.header1 .container .row nav ul li#contact a {
-            color: #555;
-            line-height: 2.7em;
-            height: 100%;
-            width: 100%;
-            background-color: #fff;
-            box-shadow: 0 3px 15px rgba(1, 1, 1, 0.1);
-            padding: 9px 20px;
-            border-radius: 2px;
-            font-weight: 600;
-            font-size: 0.9em;
-            text-decoration: none !important;
-            transition: .3s all; }
-            header.header1 .container .row nav ul li#contact a:hover {
+          header.header1 .container .row nav ul li#contact {
+            overflow: hidden; }
+            header.header1 .container .row nav ul li#contact a {
+              color: #111;
+              border-bottom: 2px solid #eb3d63;
+              font-weight: 600;
+              font-size: 1em;
               text-decoration: none !important;
-              background-color: #eb3d63;
-              color: #fff; }
+              transition: .2s all; }
+              header.header1 .container .row nav ul li#contact a:hover {
+                color: #eb3d63; }
 
 #project-page {
   background-color: white; }
@@ -167,91 +174,109 @@ header.header1 {
 /*===========================================================
   HOMEPAGE
 ===========================================================*/
-@keyframes hero {
-  0% {
-    transform: translate(0, 500px);
-    opacity: 0; }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1; } }
-.homepage .header1 {
-  background: #fff; }
-
 .container-fluid.hero {
   display: flex;
-  height: calc(100vh - 80px);
-  align-items: center;
-  background: #fff;
+  height: 100vh;
+  padding-left: 0;
+  padding-right: 0;
   margin-bottom: 100px; }
-  .container-fluid.hero .ca3-scroll-down-arrow {
-    background-image: url(../assets/images/arrow.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    fill: red; }
-  .container-fluid.hero .ca3-scroll-down-link {
-    cursor: pointer;
-    height: 25px;
-    fill: red;
-    width: 80px;
-    margin: 0px 0 0 -40px;
-    line-height: 60px;
+  .container-fluid.hero .bg {
     position: absolute;
-    left: 50%;
-    bottom: 30px;
-    color: #FFF;
-    text-align: center;
-    font-size: 70px;
-    z-index: 100;
-    text-decoration: none;
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4); }
-  .container-fluid.hero div.container {
+    background-color: #111;
+    width: 100%;
+    height: 100%; }
+  .container-fluid.hero .grid {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+    .container-fluid.hero .grid .line-parent {
+      height: 100%;
+      display: flex;
+      position: absolute; }
+      .container-fluid.hero .grid .line-parent:nth-child(1) {
+        margin-left: 0; }
+      .container-fluid.hero .grid .line-parent:nth-child(2) {
+        margin-left: 16.6vw; }
+      .container-fluid.hero .grid .line-parent:nth-child(3) {
+        margin-left: 33.2vw; }
+      .container-fluid.hero .grid .line-parent:nth-child(4) {
+        margin-left: 49.8vw; }
+      .container-fluid.hero .grid .line-parent:nth-child(5) {
+        margin-left: 66.4vw; }
+      .container-fluid.hero .grid .line-parent:nth-child(6) {
+        margin-left: 83vw; }
+      .container-fluid.hero .grid .line-parent .line-element {
+        background-color: #333;
+        width: 1px;
+        height: 100%; }
+  .container-fluid.hero .arrow-parent {
+    position: absolute;
+    margin-top: 50.3vh;
+    margin-left: calc(16.6vw + 703px);
+    overflow: hidden; }
+    .container-fluid.hero .arrow-parent .hero-arrow {
+      opacity: 0; }
+      .container-fluid.hero .arrow-parent .hero-arrow svg #work, .container-fluid.hero .arrow-parent .hero-arrow svg .arrow-lines {
+        opacity: 0; }
+      .container-fluid.hero .arrow-parent .hero-arrow circle {
+        fill: white; }
+  .container-fluid.hero .contact-parent {
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    left: 83.1%;
+    width: 300px;
+    height: 100px; }
+    .container-fluid.hero .contact-parent .contact {
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      position: absolute;
+      border-bottom: 2px solid #FBCD25;
+      padding-right: 25px;
+      transition: 1s; }
+      .container-fluid.hero .contact-parent .contact svg {
+        transform: scale(0.35);
+        display: none;
+        position: absolute;
+        top: -13px;
+        left: 50px;
+        stroke-width: 5px; }
+      .container-fluid.hero .contact-parent .contact:hover {
+        padding-right: 42px;
+        text-decoration: none; }
+        .container-fluid.hero .contact-parent .contact:hover svg {
+          display: inline-block; }
+  .container-fluid.hero .title-main {
     position: relative;
-    text-align: left !important; }
-    .container-fluid.hero div.container h1 {
+    text-align: left !important;
+    margin-left: 16.6vw;
+    margin-top: calc(50vh - 188px); }
+    .container-fluid.hero .title-main h1 {
       font-weight: 900;
-      font-size: 100px;
+      font-size: 150px;
       margin-top: -20px;
       margin-bottom: 0;
       line-height: 1em;
-      color: color("black");
+      color: white;
       display: block;
-      animation-name: hero;
-      animation-duration: 1s;
       letter-spacing: -2px; }
-    .container-fluid.hero div.container p:nth-of-type(1) {
+    .container-fluid.hero .title-main p {
+      display: flex;
       max-width: 750px;
-      color: #111111;
-      font-size: 18px;
+      color: white;
+      font-size: 30px;
       margin-top: 30px;
       display: block;
       line-height: 1.6em;
       font-weight: 900;
-      animation-name: hero;
-      animation-duration: 1s;
       font-family: 'helvetica', sans-serif; }
-      .container-fluid.hero div.container p:nth-of-type(1) span {
-        margin: 0 20px;
-        color: #F9024D; }
-    .container-fluid.hero div.container p:nth-of-type(2) {
-      max-width: 650px;
-      margin-top: 35px;
-      animation-name: hero;
-      animation-duration: 1s;
-      max-width: 780px;
-      margin-bottom: 30px;
-      font-size: 18px;
-      color: #111; }
-    .container-fluid.hero div.container ul {
-      margin-top: 35px;
-      padding-left: 0;
-      animation-name: hero;
-      animation-duration: 1s; }
-      .container-fluid.hero div.container ul li {
-        display: inline-block;
-        margin-right: 3px; }
-        .container-fluid.hero div.container ul li a img {
-          width: 30px;
-          height: 30px; }
+      .container-fluid.hero .title-main p span:nth-child(1) {
+        color: #FCF2BD; }
+      .container-fluid.hero .title-main p span:nth-child(2) {
+        color: #F7E376; }
+      .container-fluid.hero .title-main p span:nth-child(3) {
+        color: #FBCD25; }
 
 .project-description {
   margin-bottom: 5px; }
@@ -301,7 +326,6 @@ header.header1 {
             padding-right: 15px; }
         .project-description.theme-2 .container .row .col-md-6 .text-block h1 {
           font-size: 48px;
-          font-family: 'Source Sans Pro', sans-serif;
           margin-top: 30px;
           margin-bottom: 14px;
           font-weight: 900;
