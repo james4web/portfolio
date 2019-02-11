@@ -56,7 +56,7 @@ $color3: black;
 
 // misc stylings
 body {
-    background-color: #f1f1f1;
+    background-color: #fff;
 }
 p {
   font-family: 'helvetica', sans-serif;
@@ -101,6 +101,7 @@ h5 {
     position: relative;
 }
 .title-main {
+    position: fixed;
     text-align: left;
     overflow: hidden;
 }
@@ -109,6 +110,24 @@ h5 {
     position: relative;
     top: 50%;
     transform: translateY(-50%)
+}
+.section2 {
+    .balloon {
+        transform: scale(.8);
+        transform-origin: bottom;
+    }
+    p.heading {
+        font-size: 28px;
+        color: black;
+        font-weight: 800 !important;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    p.text-content {
+        font-size: 16px;
+        color: #F7B100;
+        font-weight: 500;
+    }
 }
 
 // header styles
@@ -261,13 +280,13 @@ header {
     padding-right: 0;
     margin-bottom: 100px;
     .bg {
-        position: absolute;
+        position: fixed;
         background-color: #111;
         width: 100%;
         height: 100%;
     }
     .grid {
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
         .line-parent {
@@ -293,7 +312,7 @@ header {
                 margin-left: 83vw;
             }
             .line-element {
-                background-color: #333;
+                background-color: #222;
                 width: 1px;
                 height: 100%;
             }
@@ -304,6 +323,7 @@ header {
         margin-top: 50.3vh;
         margin-left: calc(16.6vw + 703px);
         overflow: hidden;
+        position: fixed;
         .hero-arrow {
             opacity: 0;
             svg #work, svg .arrow-lines {
@@ -316,9 +336,9 @@ header {
     }
     .contact-parent {
         overflow: hidden;
-        position: absolute;
+        position: fixed;
         top: 30px;
-        left: 83.1%;
+        left: 83%;
         width: 300px;
         height: 100px;
         .contact {
@@ -328,10 +348,10 @@ header {
             position: absolute;
             border-bottom: 2px solid #FBCD25;
             padding-right: 25px;
-            transition: 1s;
-            svg {
+            #envelope {
                 transform: scale(.35);
-                display:none;
+                visibility: hidden;
+                opacity: 0;
                 position: absolute;
                 top: -13px;
                 left: 50px;
@@ -349,7 +369,6 @@ header {
     }
     
     .title-main {
-        position: relative;
         text-align: left !important;
         margin-left: 16.6vw;
         margin-top: calc(50vh - 188px);
