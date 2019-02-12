@@ -15,6 +15,43 @@ $color2: white;
 $color3: black;
 
 
+// Mixins
+@mixin grid {
+    .grid {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        .line-parent {
+            height: 100%;
+            display: flex;
+            position: absolute;
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+            &:nth-child(2) {
+                margin-left: 16.6vw;
+            }
+            &:nth-child(3) {
+                margin-left: 33.2vw;
+            }
+            &:nth-child(4) {
+                margin-left: 49.8vw;
+            }
+            &:nth-child(5) {
+                margin-left: 66.4vw;
+            }
+            &:nth-child(6) {
+                margin-left: 83vw;
+            }
+            .line-element {
+                background-color: #222;
+                width: 1px;
+                height: 100%;
+            }
+        }
+    }
+}
 
 // Removes white background on image
 .blend-multiply {
@@ -68,7 +105,7 @@ p {
 }
 
 h1 {
-    margin-top: 28px;
+    margin-top: 10px;
     font-size: 75px;
     font-weight: 800;
     color: black;
@@ -100,6 +137,9 @@ h5 {
     width: 100vw;
     position: relative;
 }
+.homepage {
+    @include grid;
+}
 .title-main {
     position: fixed;
     text-align: left;
@@ -108,20 +148,41 @@ h5 {
 .s-inner {
     text-align: center;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%)
+    height: 100%;
 }
 .section2 {
-    .balloon {
-        transform: scale(.8);
-        transform-origin: bottom;
+    position: relative;
+    @include grid;
+    .grid {
+        left: 0;
+        .line-parent {
+            background-color: #ddd;
+        }
     }
     p.heading {
-        font-size: 28px;
+        font-size: 20px;
+        top: calc(50vh - 150px);
+        left: calc(16.667vw + (16.667vw / 2));
         color: black;
+        text-align: center;
+        background-color: white;
+        border: 1px solid #ddd;
         font-weight: 800 !important;
         margin-top: 20px;
         margin-bottom: 5px;
+        width: calc(16.6vw * 3);
+        position: absolute;
+        text-align: left;
+        // box-shadow: 0 0 50px 0 rgba(1,1,1,.1);
+        padding: calc(16.667vw / 4) calc(16.667vw / 2);
+        box-sizing: border-box;
+        span {
+            display: block;
+            height: 7px;
+            width: calc(16.667vw / 3);
+            background-color: #FCF2BD;
+            margin-bottom: 30px;
+        }
     }
     p.text-content {
         font-size: 16px;
@@ -134,55 +195,17 @@ h5 {
 header {
     &.header1 {
         height: 80px;
+        background-color: #F7E376;
         .container {
-            .row {
-                display: flex;
-                justify-content: space-between;
-                .logo {
-                    margin-top: 20px;
-                    a {
-                        svg {
-                            height: 30px !important;
-                            transition: all 1s;
-                            &:hover {
-                                -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-                                filter: grayscale(100%);
-                            }
-                        }
-                    }
-                }
-                nav {
-                    padding-top: 18px;
-                    ul {
-                        padding-right: 20px;
-                        li {
-                            display: inline-block;
-                            position: relative;
-                            padding: 0px;
-                            margin-left: 30px;
-                            &:hover {
-                                &:after {
-                                    background-color: #eee;
-                                    width: 100%;
-                                }
-                            }
-                            &#contact {
-                                overflow: hidden;
-                                a {
-                                    color:#111;
-                                    border-bottom: 2px solid #eb3d63;
-                                    font-weight: 600;
-                                    font-size: 1em;
-                                    text-decoration: none !important;
-                                    transition: .2s all;
-                                    &:hover {
-                                        // padding-bottom: 1px;
-                                        color: #eb3d63;
-                                    }
-                                }
-                            }
-                        }
-                    }
+            .logo {
+                text-align: right;
+                a {
+                    font-size: 11px;
+                    color: black;
+                    padding-top: 15px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    display: inline-block;
                 }
             }
         }
@@ -194,18 +217,35 @@ header {
 #project-page {
     background-color: white;
     .project-title {
-      padding-top: 50px;
+      padding-top: 10px;
       padding-bottom: 50px;
+      background-color: #F7E376;
+      margin-bottom: 100px;
         .project-text {
             padding-bottom: 30px;
             width: 100%;
+            span {
+                color: black !important;
+                font-weight: 600;
+                margin-bottom: 17px;
+                display: inline-block;
+            }
             h1 {
                 width: 100%;
-                font-weight: 800;
-                font-size: 65px;
+                font-weight: 900;
+                font-size: 70px;
+                line-height: 1em;
+                margin-top: 0px;
+                margin-bottom: 20px;
             }
-            h5 {
-                color: lighten($color3, 50%);
+            p {
+                color: black !important; 
+                font-weight: 600;
+                span {
+                    margin-bottom: 20px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
             }
         }
     }
@@ -285,39 +325,7 @@ header {
         width: 100%;
         height: 100%;
     }
-    .grid {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        .line-parent {
-            height: 100%;
-            display: flex;
-            position: absolute;
-            &:nth-child(1) {
-                margin-left: 0;
-            }
-            &:nth-child(2) {
-                margin-left: 16.6vw;
-            }
-            &:nth-child(3) {
-                margin-left: 33.2vw;
-            }
-            &:nth-child(4) {
-                margin-left: 49.8vw;
-            }
-            &:nth-child(5) {
-                margin-left: 66.4vw;
-            }
-            &:nth-child(6) {
-                margin-left: 83vw;
-            }
-            .line-element {
-                background-color: #222;
-                width: 1px;
-                height: 100%;
-            }
-        }
-    }
+    @include grid;
     .arrow-parent {
         position: absolute;
         margin-top: 50.3vh;
@@ -347,23 +355,11 @@ header {
             font-weight: 800;
             position: absolute;
             border-bottom: 2px solid #FBCD25;
-            padding-right: 25px;
-            #envelope {
-                transform: scale(.35);
-                visibility: hidden;
-                opacity: 0;
-                position: absolute;
-                top: -13px;
-                left: 50px;
-                stroke-width: 5px;
-            }
+            padding-right: 20px;
             &:hover {
-                padding-right: 42px;
-                text-decoration: none;
-                svg {
-                    display: inline-block;
-                }
-
+                text-decoration: none !important;
+                padding-right: 35px;            
+                transition: .4s all;
             }
         }
     }
@@ -409,87 +405,59 @@ header {
 
 // Project descripton sections on homepage and skillset section
 .project-description {
-    margin-bottom: 5px;
+    display: flex;
+    margin-bottom: 190px;
     &.theme-2 {
-        .container {
-            .row {
-                height: 350px;
-                border: 1px solid #eee !important;
-                overflow: hidden;
-                transition: all .2s ease-out;
-                background-color: white;
+        .side-1 {
+            margin-left: 16.667%;
+            width: calc(16.667% * 2);
+            padding-right: 70px;
+            .category {
+                font-size: 14px;
+                color: #aaa;
+                font-weight: 500;
+                span {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+            h1 {
+                font-size: 50px;
+                font-weight: 900;
+                color: black;
+                margin-bottom: 40px;
+            }
+            p {
+                color: black;
+            }
+            a.project-link {
+                color: #545459;
+                font-size: 15px;
+                text-decoration: none !important;
+                border-bottom: 4px solid #F7E376;
+                padding-bottom: 5px;
+                font-weight: 500;
+                transition: .2s all;
+                margin-top: 50px;
+                padding-right: 12px;
+                display: inline-block;
+                i.fas {
+                    transform: translateX(10px);
+                    transition: .2s all;
+                }
                 &:hover {
-                    box-shadow: 0 7px 25px rgba(1,1,1,.08);
+                    i.fas {
+                        transform: translateX(15px)
+                    }
                 }
-                a {
+            }
+        }
+        .side-2 {
+            .img-block {
+                width: 600px;
+                img {
                     width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    text-decoration: none !important;
-                    display: flex;
-                    overflow: hidden;
-                    @media (max-width: 900px) {
-                        flex-direction: column;
-                        .col-md-6 {
-                            max-width: 100%;
-                        }
-                    }
-                }
-                .col-md-6 {
-                    padding: 0;
-                    &:nth-child(1) {
-                        background-color: white;
-                    }
-                    .text-block {
-                        padding: 30px 35px 20px 40px;
-                        height: 100%;
-                        display: -webkit-box;
-                        display: -ms-flexbox;
-                        display: flex;
-                        -webkit-box-orient: vertical;
-                        -webkit-box-direction: normal;
-                        -ms-flex-direction: column;
-                                flex-direction: column;
-                        .category {
-                            display: block;
-                            color: darken( $bodyText, 90%);
-                            // font-family: 'Playfair Display', serif;
-                            font-family: 'helvetica', sans-serif;
-                            font-weight: 600;
-                            font-size: 13px;
-                            span {
-                                color: #999;
-                                padding-left: 15px;
-                                padding-right: 15px;
-                            }
-                        }
-                        h1 {
-                            font-size: 48px;
-                            margin-top: 30px;
-                            margin-bottom: 14px;
-                            font-weight: 900;
-                            margin-left: -2px;
-                            letter-spacing: -2px;
-                            color: color('$black');
-                        }
-                        .description {
-                            display: block;
-                            color: lighten( $bodyText, 10%);
-                            font-size: 15px;
-                            padding-bottom: 20px;
-                            // font-style: italic;
-                            font-weight: 500;
-                        }
-                        p {
-                            margin-top: auto;
-                        }
-                    }
-                    .img-block  {
-                        overflow: hidden;
-                        img {
-                            pointer-events: none;
-                        }
-                    }
+                    box-shadow: 0 0 50px 0 rgba(1,1,1,.15);
                 }
             }
         }

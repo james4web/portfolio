@@ -13,8 +13,6 @@ jQuery(document).ready(function($) {
     .staggerFrom('#work, .arrow-lines',2,{scaleY: 0, transformOrigin: "top center", ease: Power2.easeOut})
     .to('.contact',1,{x:'0%', ease: Power2.easeOut},'-=.3')
     .fromTo("#envelope",1 ,{drawSVG:1}, {drawSVG:"100%"})
-    .staggerTo(".balloon", 5, {repeat:-1,x:'-=5px', delay:0,rotation: 1, y:'-=20px',yoyo: true,ease: Power2.easeInOut},'-=2.5')
-    .staggerTo(".balloon", 2, {repeat:-1,rotation: 2,delay:0, ease: Power2.easeInOut},'-=2.5')
 
 	//Scroll Starts
     
@@ -48,10 +46,10 @@ jQuery(document).ready(function($) {
 
 var tlMainScrollOut = new TimelineMax()
     .add([
-        TweenMax.to('.title-main, .contact', 0.1, {autoAlpha:0}),
+        TweenMax.to('.title-main, .contact, .hero-arrow', 0.1, {autoAlpha:0}),
         TweenMax.from('.section2', 10, {autoAlpha:0}),
-        TweenMax.from('.balloon', 1500, {scale:0, ease: Power4.easeOut}),
-        TweenMax.from('.heading', 500, {y:'100', delay:20,autoAlpha:0,ease: Power4.easeOut}),
+        TweenMax.from('.heading', 1500, {autoAlpha:0}),
+        TweenMax.from('.text-content', 500, {y:'100', delay:20,autoAlpha:0,ease: Power4.easeOut}),
         TweenMax.from('.text-content', 500, {y:'100', delay:20,autoAlpha:0,ease: Power4.easeOut}),
     ]);
 
