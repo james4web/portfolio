@@ -1,9 +1,9 @@
 jQuery(document).ready(function($) {
 
     var w = window.innerWidth;
-    var arrow = w / 6 * 1 - 20
+    var arrow = w / 6 * 1 - 20;
     
-	TweenLite.set('.text-js, .descriptor, .hero-arrow, .contact, #home-line, .line-element', {x:'-101%'})
+	TweenLite.set('.text-js, .descriptor, .hero-arrow, .contact, #home-line, .line-element, .intro-section .line-element', {x:'-101%'})
 
     var lines = new TimelineMax({yoyo:true, repeatDelay:2})
     .to('.text-js',1,{x:'0%', ease: Power2.easeOut})
@@ -17,15 +17,16 @@ jQuery(document).ready(function($) {
 	//Scroll Starts
     
     var controller = new ScrollMagic.Controller();
-    var lines = $('.line-element');
+    var lines = $('.intro-section .line-element');
     
     var tlMainScroll = new TimelineMax()
     .add([
+        TweenMax.to('.intro-section .line-element',1,{backgroundColor:'red'}),
         TweenMax.to(lines, .001, {backgroundColor:'white', autoAlpha:1}),
         TweenMax.to('.descriptor span, .contact', .001, {color:'white', borderBottomColor:'white'}),
         TweenMax.to(lines, 500, {scaleX: 1000, transformOrigin: "left"}), 
-        TweenMax.to('.bg, .title-main', 100, {autoAlpha:0, delay:4}),
-        TweenMax.to(lines, 200, {autoAlpha:0, delay:4}),       
+        TweenMax.to('.bg, .title-main', 100, {autoAlpha:0}),
+        TweenMax.to(lines, 200, {autoAlpha:0, delay:4}), 
     ]);
 
     

@@ -45,7 +45,7 @@ $color3: black;
                 margin-left: 83vw;
             }
             .line-element {
-                background-color: #222;
+                background-color: #555;
                 width: 1px;
                 height: 100%;
             }
@@ -201,7 +201,7 @@ header {
                 text-align: right;
                 a {
                     font-size: 11px;
-                    color: black;
+                    color: #666;
                     padding-top: 15px;
                     text-transform: uppercase;
                     font-weight: 600;
@@ -312,6 +312,17 @@ header {
 ===========================================================*/
 
 
+.project-container {
+    @include grid;
+    .line-element {
+        background-color: red;
+    }
+    .grid {
+        top: 0;
+        left: 0;
+    }
+}
+
 // hero styles
 .container-fluid.hero {
     display: flex;
@@ -373,6 +384,7 @@ header {
           font-size: 150px;
           margin-top: -20px;
           margin-bottom: 0;
+          margin-left: -10px;
           line-height: 1em;
           color: white;
           display: block;
