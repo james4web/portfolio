@@ -19,7 +19,7 @@ layout: project
 
 
 <!--Sticky Column-->
-<section class="sticky-column easy-road">
+<section class="ebay-work">
     <div class="container d-flex">
         <div class="row">
             <div class="col-md-12">
@@ -37,9 +37,14 @@ layout: project
                     <li><a id="tab2">Components</a></li>
                     <li><a id="tab3">Functional Improvements</a></li>
                 </ul>
-                <div class="tab-container" id="tab1C">1Some content</div>
-                <div class="tab-container" id="tab2C">2Some content</div>
-                <div class="tab-container" id="tab3C">3Some content</div>
+                <!-- Tab content first tab -->
+                <div class="tab-container" id="tab1C">
+                        {% include tab-1.html %}
+                </div>
+                <!-- Tab content second tab -->
+                <div class="tab-container" id="tab2C">{% include tab-2.html %}</div>
+                <!-- Tab content third tab -->
+                <div class="tab-container" id="tab3C">{% include tab-3.html %}</div>
             </div>
         </div>
     </div>
