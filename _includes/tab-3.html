@@ -1,0 +1,41 @@
+<h4>Functional Developments</h4>
+<div class="roles">
+    <p>My Role</p>
+    <p>Designer, Product Development, Frontend Development. (Figma, Sketch, HTML, SCSS, JS, Git, Jira)</p>
+</div>
+<div class="project">
+    <p class="bold">The Problem</p>
+    <p class="problem">The ability to make non-text and non-image elements into linkable areas.
+    </p>
+    <p>Sitebuilder was beginning to be used by the internal eBay app, Passport, to create m-web pages. To create a good experience
+        we had to overcome SiteBuilders limitation of only being able to make links out of TEXT and IMAGES. People are
+        used to being able to tap a card or area and go to another page when on a mobile device, and to a certain degree
+        with a click on other devices. Often page creators would have to make many elements (multiple text elements and
+        images) on a card into links, which was inefficent and the card was still not clickable for the majority of its
+        real estate.
+    </p>
+    <p>We needed the ability to make sections and non-text/non-image elements clickable to take SiteBuilder to the next level. This required a new UI to be
+        designed and built, that co-existed with the current Froala text editor. We had to retain the ability of the text editor to
+        manipulate text, while limiting much of its functionality that would conflict with the new functionality that we
+        wanted to build, ie. making links out of it's parent elements.</p>
+    <p>This new link functionality also had to be easy to implement going forward when applying it to new components, so
+        as not to create a load on engineering and unwanted complexity.
+    </p>
+    <div class="img-container column-layout mt-50">
+        <img src="assets/images/sb-default.jpg" alt="">
+        <img src="assets/images/sb-activated.jpg" alt="">
+    </div>
+    <div class="column-layout text-img">
+        <div class="pr-20">
+            <p class="bold">The Solution</p>
+            <p>On the Sitebuilder editing page, I created a pop-up card UI which could be summoned by clicking the link icon on the compononent, and the user is then able to type in the link and control whether it opens a new page or not. 
+                </p>
+            <p>I specified to engineering that the solution must be easy to implement going forward and that it must avoid any significant engineering effort, in the interest of efficiency and avoiding unwanted complexity. 
+                </p>
+            <p>The first component which would utilize this functionality was the Mobile Card Component which was designed specifically for mobile and would utilize a common pattern that was adaptable and customizable, and address business needs. 
+                </p>
+            <p>For internal corporate events such as Leaders Week, and Pride, organizers wanted an inhouse solution that effectively addressed their needs. This required turning what was something I previously I had to hack together with using inline styles, into a easy to use and replicable component which users could utilize freely as an m-web solution. </p>
+        </div>
+        <img src="assets/images/sb-leaders-week.jpg" alt="">
+    </div>
+</div>
