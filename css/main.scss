@@ -756,12 +756,20 @@ header {
             font-size: 22px;
             font-style: italic;
             margin-top: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .column-layout {
             display: flex;
             flex: 1;
+            justify-content: space-between;
             // for 1 col text, 1 img
+            &.sb-wireframes {
+                width: 100%;
+                img {
+                    width: 48%;
+                    box-shadow: 0 3px 20px rgba(1,1,1,.1);
+                }
+            }
             &.text-img {
                 img {
                     width: 49%;

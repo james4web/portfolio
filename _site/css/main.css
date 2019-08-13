@@ -656,10 +656,16 @@ a {
       font-size: 22px;
       font-style: italic;
       margin-top: 10px;
-      margin-bottom: 20px; }
+      margin-bottom: 40px; }
     .tab-container .project .column-layout {
       display: flex;
-      flex: 1; }
+      flex: 1;
+      justify-content: space-between; }
+      .tab-container .project .column-layout.sb-wireframes {
+        width: 100%; }
+        .tab-container .project .column-layout.sb-wireframes img {
+          width: 48%;
+          box-shadow: 0 3px 20px rgba(1, 1, 1, 0.1); }
       .tab-container .project .column-layout.text-img img {
         width: 49%;
         margin-left: auto;
