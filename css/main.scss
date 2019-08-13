@@ -8,6 +8,7 @@ $yellow: #F8DD1C;
 $lightYellow: #F7F2B7;
 $pink: #F9024D;
 $bodyText: #777;
+$greyLight: #ddd;
 $black: #111;
 
 $color: #093261;
@@ -97,6 +98,11 @@ img {
     }
 }
 
+.font-lato {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900 !important;
+}
+
 // misc stylings
 body {
     background-color: #fff;
@@ -104,10 +110,15 @@ body {
 p {
   font-family: 'helvetica', sans-serif;
   font-weight: 400;
-  color: #555;
+  color: #111;
   font-size: 16px;
   line-height: 1.5em; 
   color: color('bodyText');
+  &.large {
+      font-size: 19px;
+      line-height: 1.7em;
+      margin-bottom: 23px;
+  }
 }
 
 h1 {
@@ -132,9 +143,12 @@ h5 {
 .grey-text {
     color: #777 !important;
 }
+.light-text {
+    color: $greyLight !important;
+}
 
 .limit-text-width {
-    max-width: 800px;
+    max-width: 900px;
 }
 .bold {
     font-weight: 600;
@@ -151,25 +165,34 @@ h5 {
 .mr-20 {
     padding-left: 20px;
 }
+.mt-30 {
+    margin-top: 30px !important;
+}
 .mt-50 {
-    margin-top: 50px;
+    margin-top: 50px !important;
 }
 .mt-80 {
     margin-top: 80px;
 }
+.mb-30 {
+    margin-bottom: 30px !important;
+}
 .mb-50 {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
 }
 .mb-80 {
     margin-bottom: 80px;
 }
 .max-width80 {
     max-width: 80%;
-    display: block;
-    margin: 0 auto;
 }
 .box-shadow {
     @include box-shadow;
+}
+.center-content {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 /*===========================================================
@@ -267,10 +290,11 @@ header {
 #project-page {
     background-color: white;
     .project-title {
-      padding-top: 10px;
-      padding-bottom: 50px;
-      background-color: #F7E376;
-      margin-bottom: 100px;
+        padding-top: 20px;
+        padding-bottom: 30px;   
+        background-color: #F7E376;
+        margin-bottom: 80px;
+        animation: ebay 2s;
         .project-text {
             padding-bottom: 30px;
             width: 100%;
@@ -639,23 +663,24 @@ header {
 // Tabs
 #tabs {
     width: 100%;
-    height:80px; 
+    height:100px; 
     padding-right: 2px;
     margin-top: 30px;
     display: flex;
+    justify-content: space-between;
     padding-left: 0;
         li {
             list-style:none; 
             border:1px solid #eee; 
             margin-right:5px; 
-            width: 32%;
+            width: 33%;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 3px 15px 0 rgba(1,1,1,.07);
             a {
                 font-family: Helvetica, Arial, sans-serif; 
-                font-size: 17px;
+                font-size: 18px;
                 font-weight: 600; 
                 color: #3665F3; 
                 display:block; 
@@ -663,8 +688,9 @@ header {
                 text-align: center;
                 outline:none;
                 line-height: 1em;
+                padding-top: 3px;
                 &.inactive {
-                    color:#111 !important;
+                    color:#555 !important;
                     background: #fff;
                     outline:none; 
                 }
@@ -677,19 +703,33 @@ header {
     display: block;
     max-width:1140px; 
     text-align:left;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    background: #fafafa;
+    padding: 70px 40px;
     h4 { 
-        margin-bottom: 10px; 
-        color: #006EFC;
+        margin-bottom: 0px; 
         margin-bottom: 50px;
-        font-size: 21px;
+        font-size: 38px !important;
+        letter-spacing: .5px;
         font-weight: 700;
+        // tab heading
+        &:nth-child(1) {
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
     }
     .roles {
         p:nth-child(1) {
             color: #111;
             font-weight: 600;
             margin-bottom: 0;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-size: 13px;
+            letter-spacing: .5px;
+            // border-bottom: 3px solid #ddd;
+            display: inline-block !important;
         }
         p:nth-child(2) {
             max-width: 400px;
@@ -699,14 +739,24 @@ header {
         padding-bottom: 100px;
         p {
             max-width: 800px;
+            font-size: 16px;
         }
         p.bold {
             margin-top: 40px;
             color: black;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            letter-spacing: .5px;
+            display: inline-block  !important;
         }
         .problem {
-            color: #111;
-            text-decoration: underline;
+            color: #bbb;
+            font-weight: 800;
+            font-size: 22px;
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
         .column-layout {
             display: flex;

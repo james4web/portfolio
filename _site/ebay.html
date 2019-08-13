@@ -13,7 +13,8 @@
     <title>James Doran Portfolio</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="/css/main.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
@@ -55,7 +56,7 @@
 </header>
 
 <!--Title for project-->
-<Section class="project-title">
+<Section class="project-title ebay-page">
     <div class="container">
         <div class="clearfix">
             <div class="project-text">
@@ -68,14 +69,14 @@
 </Section>
 
 
-<!--Sticky Column-->
-<section class="sticky-column easy-road">
+<section class="ebay-work">
     <div class="container d-flex">
         <div class="row">
             <div class="col-md-12">
-                <p class="limit-text-width">SiteBuilder is the internal Site Suilding tool at eBay. Think Squarespace or WIX. My responsibility was to push the product forward. I was responsible for designing and building out new components, and over time I created a redesign of the entire product, which I largly implemented myself. This required HTML, SCSS, and JS, as far as coding. 
+                <p class="limit-text-width large">SiteBuilder is the internal Site Suilding tool at eBay. Think Squarespace or WIX. My responsibility was to push the product forward. I was responsible for designing and building out new components, and over time I created a redesign of the entire product, which I largely implemented myself. 
                 </p>
-                <p class="limit-text-width">SiteBuilder was initially a $100 plugin with very limited functionality. A large part of pushing this product forward was addressing the limitations inherent in it. This included dramatic UI functionality changes in order to build more powerful components, and an overall redesign of the entire product to deal with the component proliferation. </p>
+                <!-- <p class="limit-text-width large">SiteBuilder was based on a $100 plugin. It’s complexity and development were very limited from the start. The components were basic, with nasty thick dark icons, very little color overall, no customization of components and a very limited text editor. It required a large engineering and product design effort to turn this product into something worthwhile.</p> -->
+                <p class="limit-text-width large mb50">Below shows the Sitebuilder Redesign, Component Development, & Functional UI Improvements.</p>
             </div>
         </div>
     </div>
@@ -87,9 +88,155 @@
                     <li><a id="tab2">Components</a></li>
                     <li><a id="tab3">Functional Improvements</a></li>
                 </ul>
-                <div class="tab-container" id="tab1C">1Some content</div>
-                <div class="tab-container" id="tab2C">2Some content</div>
-                <div class="tab-container" id="tab3C">3Some content</div>
+                <!-- Tab content first tab -->
+                <div class="tab-container" id="tab1C">
+                        <h4>SiteBuilder Redesign</h4>
+<div class="roles">
+    <p class="font-lato">My Role</p>
+    <p>Designer, Product Development, Frontend Development. (Figma, Sketch, HTML, SCSS, JS, Git, Jira)</p>
+</div>
+<div class="project">
+        <p class="bold font-lato">The Problem</p>
+        <p class="problem">The large number of components created a clumsy and unintuitive experience for users.
+        </p>
+        <p>A large number of components (70+) stacked on the editing page, made it difficult for the user to navigate the components in an intuitive way. Also it very was difficult for users to tell what the components did.
+        </p>
+        <p class="mb-80">The ‘filter dropdown’ provided a means of sorting components by type, however it was often not noticed and not engaged by users. It was essentially a secondary means of navigating the component list. The primary means was to simply scroll the long & ambiguous list of components, and this was inefficient and required a learning curve. We needed a new primary method of navigating the components that addressed these issues. 
+    
+        </p>
+    <div class="img-container mt-30 mb-80">
+        <img class="box-shadow" src="assets/images/sb.gif" alt="">
+    </div>
+    <div>
+        <p class="bold font-lato" style="border-bottom: 0;">Wireframes and Other Designs</p>
+</div>
+<div class="column-layout mt-30 sb-wireframes">
+        <img src="assets/images/sb-editing-screen-basic.jpg" alt="">
+        <img src="assets/images/sb-editing-screen-dim.jpg" alt="">
+</div>
+<div class="column-layout mt-30 sb-wireframes" style="flex-direction: column;">
+        <img class="box-shadow mb-50" src="assets/images/sb-editing-page-1.jpg" alt="">
+        <img class="box-shadow mb-50" src="assets/images/sb-editing-page-1.jpg" alt="">
+</div>
+<p class="bold font-lato" style="border-bottom: 0;">Video -  Screen Capture</p>
+<iframe class="mt-30 mb-50" style="display: block; box-shadow: 0 5px 25px 0 rgba(1,1,1,.1);" width="800" height="500" src="https://www.youtube.com/embed/zTJ-n7XtzT4?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
+    <div>
+        <p class="bold font-lato">The Solution</p>
+        <p>We chose to group the components in accordions by common attributes, such as text, images, alerts, interactive, etc. Clicking on an accordion reveals the relevant components. This helps the user to navigate the increasingly large number of components in a simple and elegant way.
+        </p>
+        <p>Also the width of the component sidebar was made slightly wider so that users could see more clearly the component thumbnail, and also we added a tooltip description of each component that would be visible on hover. 
+            </p>
+        <p>Also I added in an ‘expand option’, which would expand the editing area so it was fullscreen, and the component sidebar would be pulled off screen. This allowed the user to work on the content of their site without the clutter of other page elements. 
+            </p>
+        <p>The visual design chose to mute many visual elements, other than the editing area. The component sidebar used muted grays, the background is light gray. There are no bright or colorful hues. This approach was taken so that the most colorful element on the page was the users content (hopefully), and the other elements of the page helped support and build this. 
+            </p>
+        <p>The component UI was also given an update (contextual menu on the left of the component), utilizing new brand colors and brand design aesthetic, which could be described as square, and blocky. 
+            </p>
+    </div>
+    <div class="column-layout mt-50 sb-old-new">
+        <p class="bold" style="border-bottom: 0;">Previous Version</p>
+        <img style="box-shadow: none; width: 100%; margin-left: -15px;" src="assets/images/previous-version.png" alt="">
+        <iframe width="800" height="500" src="https://www.youtube.com/embed/gHUQIKA2qag?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+   
+</div>
+                </div>
+                <!-- Tab content second tab -->
+                <div class="tab-container" id="tab2C"><h4>Component Development</h4>
+<div class="roles">
+    <p class="font-lato">My Role</p>
+    <p>Designer, Product Development, Frontend Development. (Figma, Sketch, HTML, SCSS, JS, Git, Jira)</p>
+</div>
+<div class="project">
+    <p class="bold font-lato">The Problem</p>
+    <p>There were mutliple problems to solve. We had to integrate the new brand and design language that eBay was
+        developing, into SiteBuilder, as well as overcome the limitations that were constraining us from making more
+        interesting & powerful components.
+    </p>
+    <p class="problem mt-30 mb-30 font-lato">Components were inflexible & had no options to customize, which mushroomed the number of components and was a poor user experience.</p>
+    <p>They were basic drag and drop. If you wanted multiple variations of a component you had to create MULTIPLE
+        components. As components proliferated upwards of 70, it became very clear we needed to make these components
+        smarter.</p>
+    <div class="image-text-layout mt-50">
+        <div>
+            <p class="bold" style="border-bottom: 0;">Layout 1 - Header 4 cards</p>
+            <img src="assets/images/sb-header-layout-1.png" alt="">
+        </div>
+        <div>
+            <p class="bold" style="border-bottom: 0;">Layout 1 - Header 3 cards</p>
+            <img src="assets/images/sb-header-layout-2.png" alt="">
+        </div>
+    </div>
+    <div class="image-text-layout ">
+        <div>
+            <p class="bold" style="border-bottom: 0;">Layout 1 - Header 2 cards</p>
+            <img src="assets/images/sb-header-layout-3.png" alt="">
+        </div>
+        <div>
+            <p class="bold" style="border-bottom: 0;">Layout 1 - Header no cards</p>
+            <img class="mb-80" src="assets/images/sb-header-layout-4.png" alt="">
+        </div>
+    </div>
+    <p class="bold mt-80 font-lato" style="border-bottom: 0;">Color Themes</p>
+    <img class="mb-50" src="assets/images/sb-header-colors.png" alt="">
+    <p class="bold mt-80 font-lato" style="border-bottom: 0;">Component on Editing Screen</p>
+    <img class="box-shadow mb-50" src="assets/images/sb-header-editing.png" alt="">
+    <p class="bold mt-80 font-lato" style="border-bottom: 0;">Coded Prototype</p>
+    <img class="box-shadow mb-50" src="assets/images/sb-heading.gif" alt="">
+    <p style="display: block;" class="font-lato bold mt-80">The Solution</p>
+    <p>Firstly, the most used component on our platform was the header component. Every page had one. Also it was
+        increasingly difficult for users to find good high quality images which didn’t infringe on copyright and served
+        their needs well. Luckily eBay’s new brand used large squares and rectangles of color, and it made sense to
+        incorporate that into a powerful header component.
+    </p>
+    <p>The header component had 16 different color schemes, and 4 different layouts. So that is 64 unique states. The
+        different layouts would include the ability of the user to chose 2,3 or 4 cards incorporated into the header
+        which could link to important pages within their site. Or not use any cards at all. We felt the header needed
+        many different options to avoid repetition across the platform. Usually different departments wanted to stand
+        out in someway. </p>
+</div></div>
+                <!-- Tab content third tab -->
+                <div class="tab-container" id="tab3C"><h4>Functional Developments</h4>
+<div class="roles">
+    <p class="font-lato">My Role</p>
+    <p>Designer, Product Development, Frontend Development. (Figma, Sketch, HTML, SCSS, JS, Git, Jira)</p>
+</div>
+<div class="project">
+    <p class="bold font-lato">The Problem</p>
+    <p class="problem">The inability to make elements into linkable areas, created an awkard interaction for the users, particularly at mobile.
+    </p>
+    <p>Sitebuilder was beginning to be used by the internal eBay app, Passport, to create m-web pages. To create a good experience
+        we had to overcome SiteBuilders limitation of only being able to make links out of TEXT and IMAGES. People are
+        used to being able to tap a card or area and go to another page when on a mobile device, and to a certain degree
+        with a click on other devices. Often page creators would have to make many elements (multiple text elements and
+        images) on a card into links, which was inefficent and the card was still not clickable for the majority of its
+        real estate.
+    </p>
+    <p>We needed the ability to make sections and non-text/non-image elements clickable to take SiteBuilder to the next level. This required a new UI to be
+        designed and built, that co-existed with the current Froala text editor. We had to retain the ability of the text editor to
+        manipulate text, while limiting much of its functionality that would conflict with the new functionality that we
+        wanted to build, ie. making links out of it's parent elements.</p>
+    <p>This new link functionality also had to be easy to implement going forward when applying it to new components, so
+        as not to create a load on engineering and unwanted complexity.
+    </p>
+    <div class="img-container column-layout mt-50">
+        <img style="height: auto;" src="assets/images/sb-default.jpg" alt="">
+        <img style="height: auto;" src="assets/images/sb-activated.jpg" alt="">
+    </div>
+    <div class="column-layout text-img">
+        <div class="pr-20">
+            <p class="bold font-lato">The Solution</p>
+            <p>On the Sitebuilder editing page, I created a pop-up card UI which could be summoned by clicking the link icon on the compononent, and the user is then able to type in the link and control whether it opens a new page or not. 
+                </p>
+            <p>I specified to engineering that the solution must be easy to implement going forward and that it must avoid any significant engineering effort, in the interest of efficiency and avoiding unwanted complexity. 
+                </p>
+            <p>The first component which would utilize this functionality was the Mobile Card Component which was designed specifically for mobile and would utilize a common pattern that was adaptable and customizable, and address business needs. 
+                </p>
+            <p>For internal corporate events such as Leaders Week, and Pride, organizers wanted an inhouse solution that effectively addressed their needs. This required turning what was something I previously I had to hack together with using inline styles, into a easy to use and replicable component which users could utilize freely as an m-web solution. </p>
+        </div>
+        <img src="assets/images/sb-leaders-week.jpg" alt="">
+    </div>
+</div></div>
             </div>
         </div>
     </div>
