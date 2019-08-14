@@ -251,7 +251,8 @@ header.header1 {
       #project-page .project-title .project-text span {
         color: black !important;
         font-weight: 600;
-        margin-bottom: 17px;
+        margin-bottom: 5px;
+        margin-top: 10px;
         display: inline-block; }
       #project-page .project-title .project-text h1 {
         width: 100%;
@@ -259,10 +260,11 @@ header.header1 {
         font-size: 70px;
         line-height: 1em;
         margin-top: 0px;
-        margin-bottom: 20px; }
+        margin-bottom: 40px; }
       #project-page .project-title .project-text p {
         color: black !important;
-        font-weight: 600; }
+        font-weight: 600;
+        margin-bottom: 0; }
         #project-page .project-title .project-text p span {
           margin-bottom: 20px;
           margin-left: 10px;
@@ -594,7 +596,7 @@ header.header1 {
       font-family: Helvetica, Arial, sans-serif;
       font-size: 18px;
       font-weight: 600;
-      color: #3665F3;
+      color: #111;
       display: block;
       text-decoration: none;
       text-align: center;
@@ -602,7 +604,7 @@ header.header1 {
       line-height: 1em;
       padding-top: 3px; }
       #tabs li a.inactive {
-        color: #555 !important;
+        color: #aaa !important;
         background: #fff;
         outline: none; }
 
