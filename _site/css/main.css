@@ -441,9 +441,6 @@ header.header1 {
       color: white;
       display: block;
       letter-spacing: -2px; }
-      @media screen and (max-width: 600px) {
-        .container-fluid.hero .title-main h1 {
-          font-size: 120px; } }
     .container-fluid.hero .title-main p {
       display: flex;
       max-width: 750px;
@@ -461,9 +458,6 @@ header.header1 {
         color: #F7E376; }
       .container-fluid.hero .title-main p span:nth-child(3) {
         color: #FBCD25; }
-      @media screen and (max-width: 600px) {
-        .container-fluid.hero .title-main p {
-          font-size: 25px; } }
 
 .project-description {
   display: flex;
