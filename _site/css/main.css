@@ -443,7 +443,7 @@ header.header1 {
       letter-spacing: -2px; }
       @media screen and (max-width: 600px) {
         .container-fluid.hero .title-main h1 {
-          font-size: 120px; } }
+          font-size: 90px; } }
     .container-fluid.hero .title-main p {
       display: flex;
       max-width: 750px;
@@ -463,7 +463,7 @@ header.header1 {
         color: #FBCD25; }
       @media screen and (max-width: 600px) {
         .container-fluid.hero .title-main p {
-          font-size: 25px; } }
+          font-size: 20px; } }
 
 .project-description {
   display: flex;
