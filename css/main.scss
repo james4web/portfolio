@@ -245,7 +245,7 @@ h5 {
         padding: calc(16.667vw / 4) calc(16.667vw / 2);
         box-sizing: border-box;
         @media screen and (max-width: 800px) {
-            width: 80%;
+            width: calc(100% - 40px);
             padding: 40px 40px;
             left: 0;
             right: 0;
@@ -525,13 +525,13 @@ header {
         margin-bottom: 100px;
         .side-1, .side-2 {
             width: 100% !important;
-            padding-left: 40px !important;
-            padding-right: 40px !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
             margin-left: 0 !important;
             margin-right: 0 !important;
         }
         .side-2 {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
     }
     &.theme-2 {

@@ -212,7 +212,7 @@ h5 {
     box-sizing: border-box; }
     @media screen and (max-width: 800px) {
       .section2 p.heading {
-        width: 80%;
+        width: calc(100% - 40px);
         padding: 40px 40px;
         left: 0;
         right: 0;
@@ -475,12 +475,12 @@ header.header1 {
       margin-bottom: 100px; }
       .project-description .side-1, .project-description .side-2 {
         width: 100% !important;
-        padding-left: 40px !important;
-        padding-right: 40px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
         margin-left: 0 !important;
         margin-right: 0 !important; }
       .project-description .side-2 {
-        margin-bottom: 50px; } }
+        margin-bottom: 30px; } }
   .project-description.theme-2 .side-1 {
     margin-left: 16.667%;
     width: calc(16.667% * 2);
