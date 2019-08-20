@@ -210,6 +210,13 @@ h5 {
     text-align: left;
     padding: calc(16.667vw / 4) calc(16.667vw / 2);
     box-sizing: border-box; }
+    @media screen and (max-width: 800px) {
+      .section2 p.heading {
+        width: 80%;
+        padding: 40px 40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto; } }
     .section2 p.heading span {
       display: block;
       height: 7px;
@@ -385,7 +392,7 @@ header.header1 {
   .container-fluid.hero .arrow-parent {
     position: absolute;
     margin-top: 50.3vh;
-    margin-left: calc(16.6vw + 703px);
+    margin-left: calc(16.6vw + 705px);
     overflow: hidden;
     position: fixed; }
     .container-fluid.hero .arrow-parent .hero-arrow {
@@ -394,6 +401,11 @@ header.header1 {
         opacity: 0; }
       .container-fluid.hero .arrow-parent .hero-arrow circle {
         fill: white; }
+    @media screen and (max-width: 999px) {
+      .container-fluid.hero .arrow-parent {
+        margin-top: 60.3vh;
+        margin-left: calc(16vw - 24px);
+        transform: scale(0.85); } }
   .container-fluid.hero .contact-parent {
     overflow: hidden;
     position: fixed;
@@ -412,6 +424,9 @@ header.header1 {
         text-decoration: none !important;
         padding-right: 35px;
         transition: .4s all; }
+    @media screen and (max-width: 999px) {
+      .container-fluid.hero .contact-parent {
+        left: 16.6%; } }
   .container-fluid.hero .title-main {
     text-align: left !important;
     margin-left: 16.6vw;
@@ -426,6 +441,9 @@ header.header1 {
       color: white;
       display: block;
       letter-spacing: -2px; }
+      @media screen and (max-width: 600px) {
+        .container-fluid.hero .title-main h1 {
+          font-size: 120px; } }
     .container-fluid.hero .title-main p {
       display: flex;
       max-width: 750px;
@@ -435,6 +453,7 @@ header.header1 {
       display: block;
       line-height: 1.6em;
       font-weight: 900;
+      width: auto;
       font-family: 'helvetica', sans-serif; }
       .container-fluid.hero .title-main p span:nth-child(1) {
         color: #FCF2BD; }
@@ -442,14 +461,31 @@ header.header1 {
         color: #F7E376; }
       .container-fluid.hero .title-main p span:nth-child(3) {
         color: #FBCD25; }
+      @media screen and (max-width: 600px) {
+        .container-fluid.hero .title-main p {
+          font-size: 25px; } }
 
 .project-description {
   display: flex;
   margin-bottom: 190px; }
+  @media screen and (max-width: 900px) {
+    .project-description {
+      flex-direction: column-reverse;
+      width: 100%;
+      margin-bottom: 100px; }
+      .project-description .side-1, .project-description .side-2 {
+        width: 100% !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important; }
+      .project-description .side-2 {
+        margin-bottom: 50px; } }
   .project-description.theme-2 .side-1 {
     margin-left: 16.667%;
     width: calc(16.667% * 2);
-    padding-right: 70px; }
+    padding-right: 70px;
+    margin-bottom: 50px; }
     .project-description.theme-2 .side-1 .category {
       font-size: 14px;
       color: #aaa;
@@ -464,6 +500,9 @@ header.header1 {
       margin-bottom: 40px; }
     .project-description.theme-2 .side-1 p {
       color: black; }
+      @media screen and (max-width: 900px) {
+        .project-description.theme-2 .side-1 p {
+          width: 80%; } }
     .project-description.theme-2 .side-1 a.project-link {
       color: #545459;
       font-size: 15px;
@@ -480,8 +519,17 @@ header.header1 {
         transition: .2s all; }
       .project-description.theme-2 .side-1 a.project-link:hover i.fas {
         transform: translateX(15px); }
+    @media screen and (max-width: 1000px) {
+      .project-description.theme-2 .side-1 {
+        width: calc(16.667% * 4); } }
   .project-description.theme-2 .side-2 .img-block {
     width: 600px; }
+    @media screen and (max-width: 1000px) {
+      .project-description.theme-2 .side-2 .img-block {
+        width: 90%; } }
+    @media screen and (max-width: 700px) {
+      .project-description.theme-2 .side-2 .img-block {
+        width: 100%; } }
     .project-description.theme-2 .side-2 .img-block img {
       width: 100%;
       box-shadow: 0 0 50px 0 rgba(1, 1, 1, 0.15); }

@@ -2,19 +2,31 @@ jQuery(document).ready(function($) {
 
     var w = window.innerWidth;
     var arrow = w / 6 * 1 - 20;
+    var arrowMobile = w / 6 * 1 - 20;
     
 	TweenLite.set('.text-js, .descriptor, .hero-arrow, .contact, #home-line, .line-element, .intro-section .line-element', {x:'-101%'})
+    if ($(window).width() >= 1000){	
+        var lines = new TimelineMax({yoyo:true, repeatDelay:2})
+        .to('.text-js',1,{x:'0%', ease: Power2.easeOut})
+        .to('.descriptor,.hero-arrow',1,{x:'0%', opacity:1, ease: Power2.easeOut})
+        .to('.hero-arrow',1,{x:'0%', opacity: 1, ease: Power2.easeOut},'-=0')
+        .to('.arrow-parent',1,{delay:.8, right:arrow, ease: Power2.easeOut},'1.5')
+        .staggerFrom('#work, .arrow-lines',2,{scaleY: 0, transformOrigin: "top center", ease: Power2.easeOut})
+        .to('.contact',1,{x:'0%', ease: Power2.easeOut},'-=.3')
+        .fromTo("#envelope",1 ,{drawSVG:1}, {drawSVG:"100%"})
+    };
 
-    var lines = new TimelineMax({yoyo:true, repeatDelay:2})
-    .to('.text-js',1,{x:'0%', ease: Power2.easeOut})
-    .to('.descriptor,.hero-arrow',1,{x:'0%', opacity:1, ease: Power2.easeOut})
-    .to('.hero-arrow',1,{x:'0%', opacity: 1, ease: Power2.easeOut},'-=0')
-    .to('.arrow-parent',1,{delay:.8, right:arrow, ease: Power2.easeOut},'1.5')
-    .staggerFrom('#work, .arrow-lines',2,{scaleY: 0, transformOrigin: "top center", ease: Power2.easeOut})
-    .to('.contact',1,{x:'0%', ease: Power2.easeOut},'-=.3')
-    .fromTo("#envelope",1 ,{drawSVG:1}, {drawSVG:"100%"})
+    if ($(window).width() <= 1000){	
+        var lines = new TimelineMax({yoyo:true, repeatDelay:2})
+        .to('.text-js',1,{x:'0%', ease: Power2.easeOut})
+        .to('.descriptor',1,{x:'0%', opacity:1, ease: Power2.easeOut})
+        .to('.hero-arrow',1,{x:'0%', opacity: 1, ease: Power2.easeOut},'-=0')
+        .staggerFrom('#work, .arrow-lines',2,{scaleY: 0, opacity: 1, transformOrigin: "top center", ease: Power2.easeOut})
+        .to('.contact',1,{x:'0%', ease: Power2.easeOut},'-=.3')
+        .fromTo("#envelope",1 ,{drawSVG:1}, {drawSVG:"100%"})
+    };
 
-	//Scroll Starts
+    //Scroll Starts
     
     var controller = new ScrollMagic.Controller();
     var lines = $('.intro-section .line-element');
@@ -29,7 +41,8 @@ jQuery(document).ready(function($) {
         TweenMax.to(lines, 200, {autoAlpha:0, delay:4}), 
     ]);
 
-    
+
+
     //Pin the scene
     var tweenHome = new ScrollMagic.Scene({
         triggerElement: '.pin-scene',
