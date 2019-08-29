@@ -403,9 +403,9 @@ header.header1 {
         fill: white; }
     @media screen and (max-width: 999px) {
       .container-fluid.hero .arrow-parent {
-        margin-top: 60.3vh;
+        margin-top: 55.3vh;
         margin-left: calc(16vw - 24px);
-        transform: scale(0.85); } }
+        transform: scale(0.75); } }
   .container-fluid.hero .contact-parent {
     overflow: hidden;
     position: fixed;
