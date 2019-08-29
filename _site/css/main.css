@@ -403,6 +403,11 @@ header.header1 {
         fill: white; }
     @media screen and (max-width: 999px) {
       .container-fluid.hero .arrow-parent {
+        margin-top: 65vh;
+        margin-left: calc(16vw - 24px);
+        transform: scale(0.6); } }
+    @media screen and (max-width: 600px) {
+      .container-fluid.hero .arrow-parent {
         margin-top: 48vh;
         margin-left: calc(16vw - 24px);
         transform: scale(0.6); } }

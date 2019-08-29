@@ -437,6 +437,11 @@ header {
             }
         }
         @media screen and (max-width: 999px) {
+            margin-top: 65vh;
+            margin-left: calc(16vw - 24px);
+            transform: scale(.6);
+        }
+        @media screen and (max-width: 600px) {
             margin-top: 48vh;
             margin-left: calc(16vw - 24px);
             transform: scale(.6);
