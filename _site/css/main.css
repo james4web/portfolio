@@ -405,7 +405,7 @@ header.header1 {
       .container-fluid.hero .arrow-parent {
         margin-top: 55.3vh;
         margin-left: calc(16vw - 24px);
-        transform: scale(0.75); } }
+        transform: scale(0.6); } }
   .container-fluid.hero .contact-parent {
     overflow: hidden;
     position: fixed;
