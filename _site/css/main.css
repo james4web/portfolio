@@ -408,7 +408,7 @@ header.header1 {
         transform: scale(0.6); } }
     @media screen and (max-width: 600px) {
       .container-fluid.hero .arrow-parent {
-        margin-top: 48vh;
+        margin-top: 42vh;
         margin-left: calc(16vw - 24px);
         transform: scale(0.6); } }
   .container-fluid.hero .contact-parent {
