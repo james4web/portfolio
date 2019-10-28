@@ -71,180 +71,204 @@
 
 
 <section class="ebay-work">
-    <div class="container d-flex">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="limit-text-width large">SiteBuilder is the internal Site Suilding tool at eBay. I was responsible for designing and building out new components, redesigning the UI and contributing new features and updates.
+                <h4 class="bold mb-20">The Project</h4>
+                <p class="limit-text-width">The SiteBuilder Platform was going through a redesign to address issues with the User Interface, and rethinking the drag and drop components in an effort to make them more powerful, functional and flexible. 
                 </p>
-                <!-- <p class="limit-text-width large">SiteBuilder was based on a $100 plugin. It’s complexity and development were very limited from the start. The components were basic, with nasty thick dark icons, very little color overall, no customization of components and a very limited text editor. It required a large engineering and product design effort to turn this product into something worthwhile.</p> -->
-                <p class="limit-text-width large mb50">Below shows the Sitebuilder Redesign, Component Development, & Functional UI Improvements.</p>
             </div>
         </div>
-    </div>
-    <div class="container d-flex">
-        <div class="row" style="flex: 1;">
-            <div class="col-md-12" style="flex: 1;">
-                <ul id="tabs">
-                    <li><a id="tab1">Redesign</a></li>
-                    <li><a id="tab2">Components</a></li>
-                    <li><a id="tab3">Functional Improvements</a></li>
+        <div class="row">
+            <div class="col-md-12 mt-50">
+                <h4 class="bold mb-20">My Role</h4>
+                <p class="limit-text-width">My responsibility on the Design Team was to push the SiteBuilder platform forward and filter feedback from users and stakeholders to help do this.</p>
+                <p class="limit-text-width">For the User Interface redesign I was the Lead Product Designer, and the Front-end Developer on this project. The engineering team did not have much bandwidth at the time so I jumped in to help with the development. </p>
+                <p class="limit-text-width">For component development, I was the Lead Product Designer and also did some Front-end Development along with the Engineering team. There was input and feedback from the rest of the design team, and from product and stakeholders.</p>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-50">
+                <h4 class="bold mb-20">The Existing Experience</h4>
+                <p class="limit-text-width">Over time it became clear that were limitations on the SiteBuilder Platform that needed to be addressed. The number of drag and drop components had mushroomed to 70+, and it was difficult for users to navigate through them and identify their functionality. We an abundance of user feedback which highlighted this issue. </p>
+                <p class="limit-text-width">Also the components were very basic, not aesthetically pleasing, and were essentially basic layout patterns that could be easily recreated with the text editor. Components rarely conved any unique functionality and the argument could be made that the product was a glorified text editor.</p>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-50">
+                <p class="bold mb-30 underline smaller">THE EXISTING USER INTERFACE</p>
+            </div>
+            <div class="col-md-7 mt-20">
+                <img src="assets/images/old-sitebuilder.png" alt="">
+            </div>
+            <div class="col-md-5 mt-50">
+                <ul>
+                    <li>Components are vertically stacked and not grouped, making browsing difficult (70+ components).</li>
+                    <li>Users often missed the available filter functionality for searching components.</li>
+                    <li>Components are difficult to identify & differentiate.</li>
+                    <li>Uninspiring icons and visuals.</li>
+                    <li>Non eBay brand colors used in UI.</li>
+                    <li>Inability to create page drafts.</li>
                 </ul>
-                <!-- Tab content first tab -->
-                <div class="tab-container" id="tab1C">
-                        <h4>SiteBuilder Redesign</h4>
-<div class="roles">
-    <p class="font-lato">My Role</p>
-    <p>Designer, Product Development, Frontend Development. (Figma, Sketch, HTML, SCSS, JS, Git, Jira)</p>
-</div>
-<div class="project">
-        <p class="bold font-lato">The Problem</p>
-        <p class="problem">The large number of components created a clumsy and unintuitive experience for users.
-        </p>
-        <p>A large number of components (70+) stacked on the editing page, made it difficult for the user to navigate the components in an intuitive way. Also it very was difficult for users to tell what the components did.
-        </p>
-        <p class="mb-80">The ‘filter dropdown’ provided a means of sorting components by type, however it was often not noticed and not engaged by users. It was essentially a secondary means of navigating the component list. The primary means was to simply scroll the long & ambiguous list of components, and this was inefficient and required a learning curve. We needed a new primary method of navigating the components that addressed these issues. 
-    
-        </p>
-    <div class="img-container mt-30 mb-80">
-        <img class="box-shadow" src="assets/images/sb.gif" alt="">
-    </div>
-    <div>
-        <p class="bold font-lato" style="border-bottom: 0;">Wireframes and Other Designs</p>
-</div>
-<div class="column-layout mt-30 sb-wireframes">
-    <img src="assets/images/Sitebuilder Editing Screen-basic.jpg" alt="">
-    <img src="assets/images/Sitebuilder Editing Screen-dim.jpg" alt="">
-</div>
-<div class="column-layout mt-30 sb-wireframes">
-    <img src="assets/images/Sitebuilder Editing Screen-full.jpg" alt="">
-    <img src="assets/images/Sitebuilder Editing Screen-headers.jpg" alt="">
-</div>
-<div class="column-layout mt-30" style="flex-direction: column;">
-        <img class="box-shadow mb-50" src="assets/images/sb-editing-page-1.jpg" alt="">
-        <img class="box-shadow mb-50" src="assets/images/sb-editing-page-1.jpg" alt="">
-</div>
-<p class="bold font-lato" style="border-bottom: 0;">Video -  Screen Capture</p>
-<iframe class="mt-30 mb-50" style="display: block; box-shadow: 0 5px 25px 0 rgba(1,1,1,.1);" width="800" height="500" src="https://www.youtube.com/embed/zTJ-n7XtzT4?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>
-    <div>
-        <p class="bold font-lato">The Solution</p>
-        <p>We chose to group the components in accordions by common attributes, such as text, images, alerts, interactive, etc. Clicking on an accordion reveals the relevant components. This helps the user to navigate the increasingly large number of components in a simple and elegant way.
-        </p>
-        <p>Also the width of the component sidebar was made slightly wider so that users could see more clearly the component thumbnail, and also we added a tooltip description of each component that would be visible on hover. 
-            </p>
-        <p>Also I added in an ‘expand option’, which would expand the editing area so it was fullscreen, and the component sidebar would be pulled off screen. This allowed the user to work on the content of their site without the clutter of other page elements. 
-            </p>
-        <p>The visual design chose to mute many visual elements, other than the editing area. The component sidebar used muted grays, the background is light gray. There are no bright or colorful hues. This approach was taken so that the most colorful element on the page was the users content (hopefully), and the other elements of the page helped support and build this. 
-            </p>
-        <p>The component UI was also given an update (contextual menu on the left of the component), utilizing new brand colors and brand design aesthetic, which could be described as square, and blocky. 
-            </p>
-    </div>
-    <div class="column-layout mt-50 sb-old-new">
-        <p class="bold" style="border-bottom: 0;">Previous Version</p>
-        <img style="box-shadow: none; width: 100%; margin-left: -15px;" src="assets/images/previous-version.png" alt="">
-        <iframe width="800" height="500" src="https://www.youtube.com/embed/gHUQIKA2qag?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-   
-</div>
-                </div>
-                <!-- Tab content second tab -->
-                <div class="tab-container" id="tab2C"><h4>Component Development</h4>
-<div class="roles">
-    <p class="font-lato">My Role</p>
-    <p>Designer, Product Development, Frontend Development. (Figma, Sketch, HTML, SCSS, JS, Git, Jira)</p>
-</div>
-<div class="project">
-    <p class="bold font-lato">The Problem</p>
-    <p class="problem mb-30 font-lato">Components were inflexible & had no options to customize, which mushroomed the number of components and was a poor user experience.</p>
-    <p>There were mutliple problems to solve. We had to integrate the new brand and design language that eBay was
-        developing, into SiteBuilder, as well as overcome the limitations that were constraining us from making more
-        interesting & powerful components.
-    </p>
-    <p>They were basic drag and drop. If you wanted multiple variations of a component you had to create MULTIPLE
-        components. As components proliferated upwards of 70, it became very clear we needed to make these components
-        smarter.</p>
-    <div class="image-text-layout mt-50">
-        <div>
-            <p class="bold" style="border-bottom: 0;">Layout 1 - Header 4 cards</p>
-            <img src="assets/images/sb-header-layout-1.png" alt="">
-        </div>
-        <div>
-            <p class="bold" style="border-bottom: 0;">Layout 1 - Header 3 cards</p>
-            <img src="assets/images/sb-header-layout-2.png" alt="">
-        </div>
-    </div>
-    <div class="image-text-layout">
-        <div>
-            <p class="bold" style="border-bottom: 0;">Layout 1 - Header 2 cards</p>
-            <img src="assets/images/sb-header-layout-3.png" alt="">
-        </div>
-        <div>
-            <p class="bold" style="border-bottom: 0;">Layout 1 - Header no cards</p>
-            <img class="mb-80" src="assets/images/sb-header-layout-4.png" alt="">
-        </div>
-    </div>
-    <p class="bold mt-80 font-lato" style="border-bottom: 0;">Color Themes</p>
-    <img class="mb-50" src="assets/images/sb-header-colors.png" alt="">
-    <p class="bold mt-80 font-lato" style="border-bottom: 0;">Component on Editing Screen</p>
-    <img class="box-shadow mb-50" src="assets/images/sb-header-editing.png" alt="">
-    <p class="bold mt-80 font-lato" style="border-bottom: 0;">Coded Prototype</p>
-    <!-- <img class="box-shadow mb-50" src="assets/images/sb-heading.gif" alt=""> -->
-    <iframe style="display: block; box-shadow: 0 5px 25px 0 rgba(1,1,1,.1);" width="800" height="500" src="https://www.youtube.com/embed/qo-L46nxrls" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p style="display: block;" class="font-lato bold mt-80">The Solution</p>
-    <p>Firstly, the most used component on our platform was the header component. Every page had one. Also it was
-        increasingly difficult for users to find good high quality images which didn’t infringe on copyright and served
-        their needs well. Luckily eBay’s new brand used large squares and rectangles of color, and it made sense to
-        incorporate that into a powerful header component.
-    </p>
-    <p>The header component had 16 different color schemes, and 4 different layouts. So that is 64 unique states. The
-        different layouts would include the ability of the user to chose 2,3 or 4 cards incorporated into the header
-        which could link to important pages within their site. Or not use any cards at all. We felt the header needed
-        many different options to avoid repetition across the platform. Usually different departments wanted to stand
-        out in someway. </p>
-</div></div>
-                <!-- Tab content third tab -->
-                <div class="tab-container" id="tab3C"><h4>Functional Developments</h4>
-<div class="roles">
-    <p class="font-lato">My Role</p>
-    <p>Designer, Product Development, Frontend Development. (Figma, Sketch, HTML, SCSS, JS, Git, Jira)</p>
-</div>
-<div class="project">
-    <p class="bold font-lato">The Problem</p>
-    <p class="problem">The inability to make elements into linkable areas, created an awkard interaction for the users, particularly at mobile.
-    </p>
-    <p>Sitebuilder was beginning to be used by the internal eBay app, Passport, to create m-web pages. To create a good experience
-        we had to overcome SiteBuilders limitation of only being able to make links out of TEXT and IMAGES. People are
-        used to being able to tap a card or area and go to another page when on a mobile device, and to a certain degree
-        with a click on other devices. Often page creators would have to make many elements (multiple text elements and
-        images) on a card into links, which was inefficent and the card was still not clickable for the majority of its
-        real estate.
-    </p>
-    <p>We needed the ability to make sections and non-text/non-image elements clickable to take SiteBuilder to the next level. This required a new UI to be
-        designed and built, that co-existed with the current Froala text editor. We had to retain the ability of the text editor to
-        manipulate text, while limiting much of its functionality that would conflict with the new functionality that we
-        wanted to build, ie. making links out of it's parent elements.</p>
-    <p>This new link functionality also had to be easy to implement going forward when applying it to new components, so
-        as not to create a load on engineering and unwanted complexity.
-    </p>
-    <div class="img-container column-layout mt-50">
-        <img style="height: auto;" src="assets/images/sb-default.jpg" alt="">
-        <img style="height: auto;" src="assets/images/sb-activated.jpg" alt="">
-    </div>
-    <div class="column-layout text-img">
-        <div class="pr-20">
-            <p class="bold font-lato">The Solution</p>
-            <p>On the Sitebuilder editing page, I created a pop-up card UI which could be summoned by clicking the link icon on the compononent, and the user is then able to type in the link and control whether it opens a new page or not. 
-                </p>
-            <p>I specified to engineering that the solution must be easy to implement going forward and that it must avoid any significant engineering effort, in the interest of efficiency and avoiding unwanted complexity. 
-                </p>
-            <p>The first component which would utilize this functionality was the Mobile Card Component which was designed specifically for mobile and would utilize a common pattern that was adaptable and customizable, and address business needs. 
-                </p>
-            <p>For internal corporate events such as Leaders Week, and Pride, organizers wanted an inhouse solution that effectively addressed their needs. This required turning what was something I previously I had to hack together with using inline styles, into a easy to use and replicable component which users could utilize freely as an m-web solution. </p>
-        </div>
-        <img src="assets/images/sb-leaders-week.jpg" alt="">
-    </div>
-</div></div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12 mt-80">
+                <p class="bold mb-30 underline smaller">EXISTING SITEBUILER COMPONENTS</p>
+            </div>
+            <div class="col-md-6 mt-20">
+                <ul>
+                    <li>Have a lot of text components that are very similar, and the text editor is able to recreate all these variations, creating duplication and redundency of components. </li>
+                    <li>Components are very basic and have no theming or flexibility. Very minimal interactivity.</li> 
+                    <li>Uninspiring icons and visuals.</li>
+                    <li>Non eBay brand colors & fonts.</li>
+                    <li>Inability to create page drafts.</li>
+                </ul>
+            </div>
+            <div class="col-md-6 mt-20">
+                <img src="assets/images/old-sitebuilder-components.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-80">
+                <h4 class="bold mb-30">Exploring New UI</h4>
+                <p class="mb-30">This is one of the other designs with an alternative approach that was ultimately not successful. </p>
+            </div>
+            <div class="col-md-6 mt-30 pr-20">
+                <p class="bold mb-20 underline smaller">NEW LAYOUT</p>
+                <ul>
+                    <li>Seperate layouts from the various widgets or functionalities which could be dragged and dropped onto column layouts. </li>
+                    <li>If you had a 2 column layout, you could drag and drop  a calendar widget onto one column, and drag and drop a text widget onto the other column. </li> 
+                    <li>Also the ability to stack widgets above and below each other while in the same column.</li>
+                    <li>Also the editing area, which is left of the component sidebar extends full width across the screen, and the component side bar hovers above it. The transparency between the two elements was great visually. </li>
+                </ul>
+            </div>
+            <div class="col-md-6 mt-30">
+                <p class="bold mb-20 underline smaller">PROBLEMS</p>
+                <ul>
+                    <li>Tremendous engineering effort to create the functionality to drag and drop widgets within layouts. It would require a complete ground up rebuild and we didn’t have the bandwidth. </li>
+                    <li>The site editing area extends 100% of the page width with the component sidebar hovering above it while anchored to the right side. Many people edit on their laptops where the screen is smaller than desktop. Some people have 10 inch screens, and the overlapping component sidebar took up far too much real estate from the editing area to be practical. Reducing the size of the component sidebar meant reducing the size of the thumbnails, which lead them to become very difficult to identify.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-80">
+                <img class="box-shadow mb-50" src="assets/images/sb-editing-page-1.jpg" alt="">
+            </div>
+            <div class="col-md-6 mt-80">
+                <img class="box-shadow mb-50" src="assets/images/sb-editing-page-2.jpg" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-80">
+                <h4 class="bold mb-30">A New Approach</h4>
+                <p class="mb-30 limit-text-width">We kept the accordions as a way of seperating and grouping the different components, and also kept playing with the idea of creating a feeling of 3 dimensional space, where some elements felt recessed and others in the forefront.  However there needed to be a new approach to the overall layout.</p>
+            </div>
+            <div class="col-md-6 mt-20 pr-20">
+                <ul>
+                    <li>Seperating the component sidebar and the editing area completely. No overlap.</li>
+                    <li>Making the editing area a raised panel, with the rest of the page and editing area recessed. </li>
+                    <li>The page title moved over to the top of the component sidebar and away from the editing area, in order to maximize the editing area available. </li>
+                    <li>Putting in a full screen toggle in the top right of the editing area which allowed the user to make the editing area full screen, and the component sidebar is pushed off screen. </li>
+                    <li>Using a muted color palette which didn’t compete page with the content the user is creating. There was some experimentation with adding brand colors but it was abandoned.</li>
+                    <li>The menu anchored at the bottom of the page was limited to width of the editing area, allowing better scrollability for component sidebar.</li>
+                </ul>
+            </div>
+            <div class="col-md-6 mt-20 pr-20">
+                <ul>
+                    <li>Redesigned the component menu on the left side of the selected component. On hover the black and white line icons take on various brand colors, giving them some flavor. 
+                        </li>
+                    <li>Made the outline around selected components a bold bright blue, in an effort to make selection clearer to the user. Previously it had been a muted and strange pink. </li>
+                    <li>Added descriptive tool tips. When hovering over a component thumbnail in the sidebar, a tool tip appears which gives a brief description of the component. </li>
+                    <li>The component sidebar was also made moderately wider to make it easier for users to identify components.</li>
+                    <li>The component level menu bar on the left side was completely redesigned with new line icons, brand colors and brand friendly look and feel. </li>
+                </ul>
+            </div>
+            <div class="col-md-6 mt-30">
+                <img class="box-shadow mb-50" src="assets/images/Sitebuilder Editing Screen-basic.jpg" alt="">            
+            </div>
+            <div class="col-md-6 mt-30">
+                <img class="box-shadow mb-50" src="assets/images/Sitebuilder Editing Screen-dim.jpg" alt="">
+            </div>
+            <div class="col-md-6">
+                <img class="box-shadow mb-50" src="assets/images/Sitebuilder Editing Screen-full.jpg" alt="">          
+            </div>
+            <div class="col-md-6">
+                <img class="box-shadow mb-50" src="assets/images/Sitebuilder Editing Screen-headers.jpg" alt="">
+            </div>
+        </div>
+        <div class="row mt-50">
+            <div class="col-md-12">
+                    <p class="bold smaller mb-30 underline">THE FINAL VERSION</p>
+                    <img class="box-shadow center-content" style="width: 80%;" src="assets/images/sb.gif" alt="">
+            </div>
+        </div>
+        <div class="row mt-80">
+            <div class="col-md-12 mt-80">
+                <h4 class="bold mb-30">Exploring New Components</h4>
+                <p class="limit-text-width">The exisiting components were very basic. The icons were solid, black and low fidelity. The pages created by users reflected these problems. So this is what I did…
+                </p>
+                <ul class="mt-50">
+                    <li>Redesigned all the components and added new ones.</li>
+                    <li>Added more flexibility, theming and adaptablity to components.</li>
+                    <li>Added ability to add hyperlinks to targeted elements and not just text and images.</li>
+                    <li>Incorporated eBay brand and brand colors, and typography into the platform.</li>
+                    <li>Added many more visual and interactive components, like flipcards, image based components, different header options with multiple layouts and themes.</li>
+                    <li>Added multiple page templates that were available to users.</li>
+                </ul>
+                <p class="mt-50">These are very small sample of some of components which incorporate some of these improvements. </p>
+                <p class="bold smaller mb-30 underline mt-50">GALLERY COMPONENT</p>
+                <p class="limit-text-width mb-50">This is a prototype created in figma for a gallery component. It starts from the SiteBuilder editing screen through to how it looks and functions on a webpage. This is an example of smarter components with increased flexibility and interactivity, in order to allow users to handle images in a more functional and useful way.  </p>
+                <div>
+                    <img class="box-shadow center-content" style="width: 80%;" src="assets/images/slider2.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-80">
+            <div class="col-md-12 mt-80">
+                <p class="bold smaller mb-30 underline mt-50">COLOR BOXES COMPONENT</p>
+                <p class="limit-text-width">These cards bring some much needed color to webpages. Users don’t need to upload any images or use design software. The colors are coded in, there are 4 different layouts, and 16 different color themes. 
+                </p>
+            </div>
+        </div>
+        <div class="row mt-50">
+            <div class="col-md-3">
+                <p class="bold">4 Column Layout</p>
+                <img class="box-shadow" src="assets/images/3block-4.png" alt=""></div>
+            <div class="col-md-3">
+                <p class="bold">3 Column Layout</p>
+                <img class="box-shadow" src="assets/images/3block-3.png" alt=""></div>
+            <div class="col-md-3">
+                <p class="bold">2 Column Layout</p>
+                <img class="box-shadow" src="assets/images/3block-2.png" alt=""></div>
+            <div class="col-md-3">
+                <p class="bold">1 Column Layout</p>
+                <img class="box-shadow" src="assets/images/3block-1.png" alt=""></div>
+        </div>
+        <div class="row mt-80">
+            <div class="col-md-5">
+                <p class="bold smaller mb-30 underline mt-50">SMARTER HYPERLINKS</p>
+                <p>On the platform, the only way to create a link was by using the text editor, and it only worked with some text and images. </p>
+                <p>This limitation created a clumsy user experience when it made sense to have clickable cards and areas, especially so for mobile. 
+                    </p>
+                <p>I designed a UI which would allow us to make an element linkable and editable, and not require the text editor. 
+                    </p>
+                <p>This has been used on mobile card components and will be used on many components in the pipeline. </p>
+            </div>
+            <div class="col-md-7 d-flex mt-30">
+                <img class="box-shadow" style="height: auto; width: 48%;" src="assets/images/sb-default.jpg" alt="">
+                <img class="box-shadow" style="height: auto; width: 48%; margin-left: 20px;" src="assets/images/sb-activated.jpg" alt="">
+            </div>
+        </div>
+        <div class="row mt-80 mb-80">
+            <div class="col-md-12 mb-80">
+                <hr>
+                <h4 class="bold mb-30 mt-50">Conclusion</h4>
+                <p class="limit-text-width">The UI redesign and component upgrades have created a better user experience for site creators and people who visit our sites. Our best verification of whether a feature or design was successful is from feedback from the various teams across eBay whom we interact with constantly.  We received very positive feedback about the smarter layout of the SiteBuilder editing screen and the addition of more powerful and flexible components. 
+                    </p>
+                <p class="limit-text-width">Analytics show the platform is growing in adoption across the company, which is a great sign for the future health of the platform. There is still much room to improve and make the platform more powerful, adaptive and user friendly, but we have come a long way in a short time. </p>
     </div>
 </section>
 <footer>

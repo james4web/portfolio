@@ -38,16 +38,17 @@ body {
   background-color: #fff; }
 
 p {
-  font-family: 'helvetica', sans-serif;
   font-weight: 400;
   color: #111;
   font-size: 16px;
-  line-height: 1.5em;
+  line-height: 1.7em;
   color: color("bodyText"); }
   p.large {
     font-size: 19px;
     line-height: 1.7em;
     margin-bottom: 23px; }
+  p.smaller {
+    font-size: 14px; }
 
 h1 {
   margin-top: 10px;
@@ -62,6 +63,17 @@ h1 {
 h5 {
   font-size: 1.25rem;
   font-weight: 500; }
+
+ul {
+  padding-left: 20px !important; }
+  ul li {
+    margin-bottom: 15px;
+    color: #111; }
+
+.underline {
+  border-bottom: 1px solid #333;
+  padding-top: 2px;
+  display: inline-block; }
 
 .dark-text {
   color: #333 !important; }
@@ -79,10 +91,22 @@ h5 {
   font-weight: 600; }
 
 .pr-10 {
-  padding-left: 10px; }
+  padding-right: 10px; }
 
 .pr-20 {
+  padding-right: 20px; }
+
+.pl-10 {
+  padding-left: 10px; }
+
+.pl-20 {
   padding-left: 20px; }
+
+.ml-10 {
+  margin-left: 10px; }
+
+.ml-20 {
+  margin-left: 20px; }
 
 .mr-10 {
   padding-left: 10px; }
@@ -98,6 +122,9 @@ h5 {
 
 .mt-80 {
   margin-top: 80px; }
+
+.mb-20 {
+  margin-bottom: 20px !important; }
 
 .mb-30 {
   margin-bottom: 30px !important; }
@@ -458,8 +485,7 @@ header.header1 {
       display: block;
       line-height: 1.6em;
       font-weight: 900;
-      width: auto;
-      font-family: 'helvetica', sans-serif; }
+      width: auto; }
       .container-fluid.hero .title-main p span:nth-child(1) {
         color: #FCF2BD; }
       .container-fluid.hero .title-main p span:nth-child(2) {
@@ -646,7 +672,6 @@ header.header1 {
     justify-content: center;
     box-shadow: 0 3px 15px 0 rgba(1, 1, 1, 0.07); }
     #tabs li a {
-      font-family: Helvetica, Arial, sans-serif;
       font-size: 18px;
       font-weight: 600;
       color: #111;
