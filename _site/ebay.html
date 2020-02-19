@@ -16,6 +16,9 @@
     <link href="/css/main.css" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
@@ -48,245 +51,68 @@
 </head>
 
 <body id="project-page">
-<header class="header1">
+<header class="header1 reversed">
     <div class="container">
+        <div class="row">
             <div class="logo">
                 <a href="/"><i class="fas fa-arrow-left"></i></a>
             </div>
+        </div>
     </div>
 </header>
-
+<!-- <script type="text/javascript">
+    var s ="";
+    
+    while (s!= "mypassword")
+    {
+    s=prompt("please enter your password");
+    if (s=="mypassword")
+    {
+    window.location.href="http://127.0.0.1:4000/ebay.html"; //page to redirect if password entered is correct
+    
+    }
+    else
+    {
+    alert("Incorrect password-Try again");
+    
+    }
+    }
+    </script> -->
 <!--Title for project-->
-<Section class="project-title ebay-page">
-    <div class="container">
-        <div class="clearfix">
-            <div class="project-text">
-                <span>2019</span>
-                <h1>eBay Work</h1>
-                <p>Product Design  <span style="margin-left: 10px; margin-right: 10px;">//</span>  Product Development  <span style="margin-left: 10px; margin-right: 10px;">//</span>  Front end Development</p>
+<Section class="ebay-landing">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="project-text">
+                    <span>2019</span>
+                    <h1>eBay Work</h1>
+                    <p>Product Design  <span style="display: inline-block; font-size: 30px; transform: translateY(5px); font-weight: 900; color: #bbb; margin-left: 10px; margin-right: 10px;">•</span>Front End Development</p>
+                </div>
             </div>
         </div>
     </div>
 </Section>
 
-
-<section class="ebay-work">
-    <div class="container">
+<section>
+    <div class="container ebay-cards">
         <div class="row">
-            <div class="col-md-12">
-                <h4 class="bold mb-20">The Project</h4>
-                <p class="limit-text-width">SiteBuilder is a drag and drop sitebuilding tool within eBay. It is central to the intranet. It allows all the different teams within eBay to communicate across the company in an effort to increase efficiency, communication and culture within the company. 
-                </p>
-                <p class="limit-text-width">The SiteBuilder platform was in much need of a redesign to address issues with the user interface, as well as rethinking the drag and drop components in an effort to make them more powerful, functional and flexible for users. The components consisted of a collection of text layouts which could be easily recreated by the text editor. The icons were very basic and ugly, and the visuals in general were very uncompelling. 
-                </p>
+            <div class="col">
+                <a href="ebay-various.html" class="card-link">
+                    <div class="img-area"></div>
+                    <div class="text-area">Various eBay Work<i class="fas fa-arrow-right"></i></i></div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="sitebuilder.html" class="card-link">
+                    <div class="img-area"></div>
+                    <div class="text-area">SiteBuilder Platform<i class="fas fa-arrow-right"></i></i></div>
+                </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 mt-50">
-                <h4 class="bold mb-20">My Role</h4>
-                <p class="limit-text-width">My responsibility on the Design team was to push the SiteBuilder platform forward and filter feedback from users and stakeholders to help do this.</p>
-                <p class="limit-text-width">For the user interface redesign I was the lead product designer, and the front-end developer. The engineering team did not have much bandwidth at the time so I jumped in to help with the development. I collaborated with other designers and stakeholders to address the problems and endeavoured to create a consensus on how to move forward.</p>
-                <p class="limit-text-width">The second part of the project was component development. I was the lead product designer and also did some front-end development along with the engineering team who took care of the more involved dev work.</p>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 mt-50">
-                <h4 class="bold mb-20">The Existing Experience</h4>
-                <p class="limit-text-width">Over time it became clear that there were limitations on the SiteBuilder Platform that needed to be addressed. The number of drag and drop components had mushroomed to 70+, and it was difficult for users to navigate through them and identify their functionality. We an abundance of user feedback which highlighted this issue. </p>
-                <p class="limit-text-width">Also the components were very basic, lacked any unique functionality, and were essentially basic layout patterns that could be easily recreated with the text editor. The argument could be made that the product was a glorified text editor, given its lack of functionality.</p>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 mt-50">
-                <p class="bold mb-30 underline smaller">THE EXISTING USER INTERFACE</p>
-            </div>
-            <div class="col-md-7 mt-20">
-                <img src="assets/images/old-sitebuilder.png" alt="">
-            </div>
-            <div class="col-md-5 mt-50">
-                <ul>
-                    <li>Components are vertically stacked and not grouped, making browsing difficult (70+ components).</li>
-                    <li>Users often missed the available filter functionality for searching components.</li>
-                    <li>Components are difficult to identify & differentiate.</li>
-                    <li>Uninspiring icons and visuals.</li>
-                    <li>Non eBay brand colors used in UI.</li>
-                    <li>Inability to create page drafts.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 mt-80">
-                <p class="bold mb-30 underline smaller">EXISTING SITEBUILER COMPONENTS</p>
-            </div>
-            <div class="col-md-6 mt-20">
-                <ul>
-                    <li>Have a lot of text components that are very similar, and the text editor is able to recreate all these variations, creating duplication and redundency of components. </li>
-                    <li>Components are very basic and have no theming or flexibility. Very minimal interactivity.</li> 
-                    <li>Uninspiring icons and visuals.</li>
-                    <li>Non eBay brand colors & fonts.</li>
-                </ul>
-            </div>
-            <div class="col-md-6 mt-20">
-                <img src="assets/images/old-sitebuilder-components.png" alt="">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 mt-80">
-                <h4 class="bold mb-30">Exploring New UI</h4>
-                <p class="mb-30">This is one of the other designs with an alternative approach that was ultimately not successful. </p>
-            </div>
-            <div class="col-md-6 mt-30 pr-20">
-                <p class="bold mb-20 underline smaller">NEW LAYOUT</p>
-                <ul>
-                    <li>Seperate layouts from the various widgets or functionalities which could be dragged and dropped onto column layouts. </li>
-                    <li>If you had a 2 column layout component, you could drag and drop a calendar "widget" onto one column, and drag and drop a text "widget" onto the other column, for example. </li> 
-                    <li>Also the ability to stack widgets above and below each other while in the same column.</li>
-                    <li>Also the editing area, which is left of the component sidebar extends full width across the screen, and the component side bar hovers above it. The transparency between the two elements was great visually. </li>
-                </ul>
-            </div>
-            <div class="col-md-6 mt-30">
-                <p class="bold mb-20 underline smaller">PROBLEMS</p>
-                <ul>
-                    <li>Tremendous engineering effort to create the functionality to drag and drop widgets within layout components. It would require a complete ground up rebuild and we didn’t have the bandwidth. </li>
-                    <li>The site editing area extends 100% of the page width with the component sidebar hovering above it while anchored to the right side. Many people edit on their laptops where the screen is smaller than desktop. Some people have 10 inch screens, and the overlapping component sidebar took up far too much real estate from the editing area to be practical. Reducing the size of the component sidebar meant reducing the size of the thumbnails, which lead them to become very difficult to identify.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mt-80">
-                <img class="box-shadow mb-50" src="assets/images/sb-editing-page-1.jpg" alt="">
-            </div>
-            <div class="col-md-6 mt-80">
-                <img class="box-shadow mb-50" src="assets/images/sb-editing-page-2.jpg" alt="">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 mt-80">
-                <h4 class="bold mb-30">A New Approach</h4>
-                <p class="mb-30 limit-text-width">We kept the accordions as a way of seperating and grouping the different components, and also kept playing with the idea of creating a feeling of 3 dimensional space, where some elements felt recessed and others in the forefront in an effort to engage users.  However there needed to be a new approach to the overall layout.</p>
-            </div>
-            <div class="col-md-6 mt-20 pr-20">
-                <ul>
-                    <li>Seperating the component sidebar and the editing area completely.</li>
-                    <li>Making the editing area a raised panel, with the rest of the page and editing area recessed and muted. </li>
-                    <li>The page title moved over to the top of the component sidebar and away from the editing area, in order to maximize the editing area available. </li>
-                    <li>Putting in a full screen toggle in the top right of the editing area which allowed the user to make the editing area full screen. </li>
-                    <li>Using a muted color palette which didn’t compete page with the content the user is creating. There was some experimentation with adding brand colors but it was abandoned.</li>
-                </ul>
-            </div>
-            <div class="col-md-6 mt-20 pr-20">
-                <ul>
-                    <li>Redesigned the component menu on the left side of the selected component. On hover the black and white line icons take on various brand colors, giving them some flavor. 
-                        </li>
-                    <li>Made the outline around selected components a bold bright blue, in an effort to make selection clearer to the user. Previously it had been a muted pink. </li>
-                    <li>Added descriptive tool tips that appeared on hover over component thumbnails. </li>
-                    <li>The component sidebar was also made moderately wider to make it easier for users to identify components.</li>
-                </ul>
-            </div>
-            <div class="col-md-6 mt-30">
-                <img class="box-shadow mb-50" src="assets/images/Sitebuilder Editing Screen-basic.jpg" alt="">            
-            </div>
-            <div class="col-md-6 mt-30">
-                <img class="box-shadow mb-50" src="assets/images/Sitebuilder Editing Screen-dim.jpg" alt="">
-            </div>
-            <div class="col-md-6">
-                <img class="box-shadow mb-50" src="assets/images/Sitebuilder Editing Screen-full.jpg" alt="">          
-            </div>
-            <div class="col-md-6">
-                <img class="box-shadow mb-50" src="assets/images/Sitebuilder Editing Screen-headers.jpg" alt="">
-            </div>
-        </div>
-        <div class="row mt-50">
-            <div class="col-md-12">
-                    <p class="bold smaller mb-30 underline">THE FINAL UI UPDATE</p>
-                    <p class="mb-50"><a href="https://www.youtube.com/watch?v=zTJ-n7XtzT4" target="_blank">See video of new UI</a></p>
-                    <img class="box-shadow center-content" style="width: 80%;" src="assets/images/sb.gif" alt="">
-            </div>
-        </div>
-        <div class="row mt-80">
-            <div class="col-md-12 mt-80">
-                <h4 class="bold mb-30">Exploring New Components</h4>
-                <p class="limit-text-width">The exisiting components were very basic. The icons were solid, black and low fidelity. The pages created by users reflected these problems. This is how we addressed these problems.
-                </p>
-                <ul class="mt-30">
-                    <li>Redesigned all the components and added new ones.</li>
-                    <li>Added more flexibility, theming and adaptablity to components.</li>
-                    <li>Added ability to add hyperlinks to targeted elements and not just text and images. This was a huge deal in allowing us to create components that were not limited to the text editor functionality. </li>
-                    <li>Incorporated eBay brand and brand colors, and typography into the platform.</li>
-                    <li>Added many more visual and interactive components, like flipcards, image based components, different header options with multiple layouts and themes.</li>
-                    <li>Added multiple page templates that were available to users.</li>
-                </ul>
-                <p class="mt-50">These are small sample of some of components which incorporate some of these improvements. </p>
-                <p class="bold smaller mb-30 underline mt-50">GALLERY COMPONENT</p>
-                <p class="limit-text-width mb-50">This is a prototype created in figma for a gallery component. It starts from the SiteBuilder editing screen through to how it looks and functions on a webpage. This is an example of smarter components with increased flexibility and interactivity, in order to allow users to represent images in a much smarter way. Previously images were stacked on top of each other and were static. This is a huge jump forward.</p>
-                <div>
-                    <img class="box-shadow center-content" style="width: 80%;" src="assets/images/slider-crop.gif" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="row mt-80" style="align-items: flex-start;">
-            <div class="col-md-5 sticky">
-                <p class="bold smaller mb-30 underline mt-50">SMARTER HYPERLINKS</p>
-                <p>On the platform, the only way to create a link was by using the text editor, and it only worked with some text and images.</p>
-                <p>This limitation created a clumsy user experience when it made sense to have clickable cards and areas, especially so for mobile. 
-                    </p>
-                <p>I designed a UI which would allow us to make an element linkable and editable, and not require the text editor. 
-                    </p>
-                <p>This has been used on mobile card components and will be used on many components in the pipeline.</p>
-                <p>This was a huge leap forward for the product by allowing us to target links with a custom UI and not have to hack around the text editor.</p>
-            </div>
-            <div class="col-md-7 mt-30">
-                <img class="box-shadow" style="height: auto; width: 95%; margin-bottom: 50px;" src="assets/images/sb-default.jpg" alt="">
-                <img class="box-shadow" style="height: auto; width: 95%;" src="assets/images/sb-activated2.jpg" alt="">
-            </div>
-        </div>
-        <div class="row mt-80">
-            <div class="col-md-12 mt-80">
-                <p class="bold smaller mb-30 underline mt-50">COLOR BOXES COMPONENT</p>
-                <p class="limit-text-width">These cards bring some much needed color to webpages. Users don’t need to upload any images or use design software. The colors are coded in, there are 4 different layouts, and 16 different color themes. These cards employ the recently added hyperlink functionality I explained above. 
-                </p>
-            </div>
-        </div>
-        <div class="row mt-50">
-            <div class="col-md-6">
-                <p class="bold smaller">SiteBuilder Editing Page</p>
-                <img class="box-shadow" src="assets/images/3bock-editing.jpg" alt=""></div>
-            <div class="col-md-6">
-                <p class="bold smaller">Rendered Front End</p>
-                <img class="box-shadow" src="assets/images/3bock-front.jpg" alt=""></div>
-        </div>
-        <div class="row mt-50">
-            <div class="col-md-3">
-                <p class="bold smaller">4 Column Layout</p>
-                <img class="box-shadow" src="assets/images/3block-4.png" alt=""></div>
-            <div class="col-md-3">
-                <p class="bold smaller">3 Column Layout</p>
-                <img class="box-shadow" src="assets/images/3block-3.png" alt=""></div>
-            <div class="col-md-3">
-                <p class="bold smaller">2 Column Layout</p>
-                <img class="box-shadow" src="assets/images/3block-2.png" alt=""></div>
-            <div class="col-md-3">
-                <p class="bold smaller">1 Column Layout</p>
-                <img class="box-shadow" src="assets/images/3block-1.png" alt=""></div>
-        </div>
-        <div class="row mt-80 mb-80">
-            <div class="col-md-12 mb-80">
-                <h4 class="bold mb-30 mt-50">Conclusion</h4>
-                <p class="limit-text-width">The UI redesign and component upgrades have created a far superior user experience for site creators and people who visit the our platform.</p> 
-                <p>Our best verification of whether a feature or design was successful is from feedback from the various teams across eBay whom we interact with constantly. </p> 
-                <ul>
-                    <li>User feedback regarding the UI redesign of SiteBuilder was overwhelmingly positive.</li>
-                    <li>Much easier to navigate, identify and discover components.</li>
-                    <li>Interactive components like flipcards, and much more visual components, engage users and site creators.</li>
-                    <li>Incorpororating eBay brand into the overall aesthetic.</li>
-    
-                </ul>
-                     
-                <p class="limit-text-width">Analytics show the platform is growing in adoption across the company, which is a great sign for the future health of the platform. There is still plenty of room to improve, but we have come a long way in a short time. </p>
     </div>
 </section>
+
+
 <footer>
     <script src="/js/main.js"></script>
 </footer>

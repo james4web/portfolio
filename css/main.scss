@@ -63,7 +63,8 @@ $color3: black;
 }
 
 * {
-    font-family: 'helvetica neue',helvetica, arial, sans-serif;
+    // font-family: 'helvetica neue',helvetica, arial, sans-serif;
+    font-family: 'Karla', sans-serif;
 }
 
 .mb50 {
@@ -71,6 +72,50 @@ $color3: black;
 }
 img {
     width: 100%;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+// Serif heading class
+.h-serif-md { 
+    // font-family: 'Vollkorn', serif;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 22px;
+    letter-spacing: .01em;
+    color: black;
+    font-weight: 700 !important;
+    &:before {
+        content:'';
+        height: 3px;
+        width: 40px;
+        background: #F7E376;
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+.h-sans-md {
+    letter-spacing: -.1px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.h-serif-sm {
+    // font-family: 'Vollkorn', serif;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 26px !important;
+    color: black;
+    font-weight: 500 !important;
+}
+
+.fw-bg {
+    background-color: #f5f5f5;
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 50px;
 }
 
 .link {
@@ -107,11 +152,13 @@ img {
 body {
     background-color: #fff;
 }
+
 p {
   font-weight: 400;
   color: #111;
   font-size: 16px;
-  line-height: 1.7em; 
+  line-height: 2em;
+  letter-spacing: -.1px; 
   color: color('bodyText');
   &.large {
       font-size: 19px;
@@ -124,14 +171,15 @@ p {
 }
 
 h1 {
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 75px;
-    font-weight: 800;
+    font-weight: 900;
     color: black;
     margin-bottom: 8px;
     line-height: 1em;
     &.text-js {
         margin-left: -5px;
+        letter-spacing: -10px !important;
     }
 }
 h5 {
@@ -144,6 +192,7 @@ ul {
     li {
         margin-bottom: 15px;
         color: #111;
+        line-height: 1.8em;
     }
 }
 
@@ -294,7 +343,7 @@ ul {
             display: block;
             height: 7px;
             width: calc(16.667vw / 3);
-            background-color: #FCF2BD;
+            background-color: #F7E376;
             margin-bottom: 30px;
         }
     }
@@ -309,21 +358,50 @@ ul {
 header {
     &.header1 {
         height: 80px;
-        background-color: #F7E376;
+        background-color: #333;
         .container {
             .logo {
                 text-align: left;
                 a {
                     font-size: 18px;
-                    color: #111;
-                    padding-top: 18px;
+                    color: #fff;
+                    margin-top: 18px;
                     text-transform: uppercase;
                     font-weight: 600;
                     display: inline-block;
-                    transition: all .2s;
+                    transition: all .3s;
+                    transform-origin: center;
+                    width: 35px;
+                    height: 35px;
+                    padding-left: 8px;
+                    padding-top: 4px;
+                    border: 1px solid #ddd;
+                    border-radius: 50%;
+                    // background-color: #222;
                     // opacity: .5;
                     &:hover {
-                        transform: scale(1.3);
+                        transform: scale(1.2);
+                        background-color: white;
+                        // box-shadow: 0 2px 25px 0 rgba(1,1,1,.1);
+                        .fa-arrow-left:before {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+        &.reversed {
+            background-color: white;
+            .container {
+                .logo {
+                    a {
+                        color: black;
+                        &:hover {
+                            background-color: black;
+                            .fa-arrow-left:before {
+                                color: white;
+                            }
+                        }
                     }
                 }
             }
@@ -333,20 +411,140 @@ header {
 
 
 //PROJECT PAGES - Interior
+// Style for ebay header work 
+.project-text {
+    padding-bottom: 30px;
+    width: 100%;
+    span {
+        color: #999 !important;
+        font-weight: 500;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        display: inline-block;
+        font-size: 18px;
+    }
+    h1 {
+        width: 100%;
+        font-weight: 900;
+        font-size: 80px;
+        line-height: 1em;
+        text-shadow: 0 3px 55px rgba(255,255,255,.8);
+        margin-top: 0px;
+        margin-bottom: 30px !important;
+        font-family: 'Abril Fatface', cursive;
+        letter-spacing: 0px;
+        color: #000;
+        font-weight: 300;
+    }
+    p {
+        color: #999 !important; 
+        font-weight: 500;
+        margin-bottom: 0;
+        font-size: 18px;
+        span {
+            color: #ddd !important; 
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: white;
+            opacity: 1;
+        }
+    }
+}
+
+.work {
+    .row {
+        display: flex;
+        padding-top: 50px;
+        .col {
+            &:nth-child(1) {
+                flex: 3;
+                padding-top: 80px;
+
+            }
+            &:nth-child(2) {
+                flex: 5;
+            }
+        }
+    }
+    // flips columns styling
+    &.reverse {
+        .col {
+            &:nth-child(2) {
+                flex: 3;
+                padding-top: 80px;
+
+            }
+            &:nth-child(1) {
+                flex: 5;
+            }
+        }
+    }
+    img {
+        transition: all .3s ease-out;
+        // cursor: pointer;
+        &:hover {
+            // transform: scale(1.1);
+        }
+    }
+    h2 {
+        font-family: 'Abril Fatface', cursive;
+        margin-bottom: 40px;
+        &:before {
+            content:'';
+            display: block;
+            height: 5px;
+            width: 28px;
+            background-color: #FEDA37;
+            margin-bottom: 20px;
+        }
+    }
+    p {
+        font-size: 15px;
+    }
+    ul {
+        li {
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+    }
+    &.bg-grey {
+        background: #F6F5F2;
+        border-radius: 10px;
+        padding: 50px 30px;
+        h2, p, li {
+            color: #555;
+        }
+    }
+}
+
+#leaders-week {
+    .row {
+        .col {
+            &:nth-child(1) {
+                text-align: center;
+            }
+        }
+    }
+    img {
+        width: 450px !important;
+        margin-bottom: 100px;
+    }
+}
+
 #project-page {
     background-color: white;
     .project-title {
         padding-top: 20px;
         padding-bottom: 30px;   
-        background-color: #F7E376;
         margin-bottom: 80px;
         animation: ebay 2s;
         .project-text {
             padding-bottom: 30px;
             width: 100%;
             span {
-                color: black !important;
-                font-weight: 600;
+                color: #999 !important;
+                font-weight: 500;
                 margin-bottom: 5px;
                 margin-top: 10px;
                 display: inline-block;
@@ -354,19 +552,27 @@ header {
             h1 {
                 width: 100%;
                 font-weight: 900;
-                font-size: 70px;
+                font-size: 80px;
                 line-height: 1em;
+                text-shadow: 0 3px 55px rgba(255,255,255,.8);
                 margin-top: 0px;
                 margin-bottom: 40px;
+                font-family: 'Abril Fatface', cursive;
+                letter-spacing: 0px;
+                color: #f5f5f5;
+                font-weight: 300;
             }
             p {
-                color: black !important; 
-                font-weight: 600;
+                color: #999 !important; 
+                font-weight: 500;
                 margin-bottom: 0;
                 span {
+                    color: #fff !important; 
                     margin-bottom: 20px;
                     margin-left: 10px;
                     margin-right: 10px;
+                    color: white;
+                    opacity: 1;
                 }
             }
         }
@@ -424,6 +630,67 @@ header {
   .non-sticky {
       position: static !important;
   }
+
+//   ebay inerstial page
+  .ebay-landing {
+    height: 400px;
+    .project-text {
+        padding-top: 80px;
+        h1 {
+            font-family: 'Abril Fatface', cursive;
+            margin-bottom: 50px;
+        }
+    }
+  }
+  .ebay-cards {
+    margin-top: 30px;
+      margin-bottom: 70px;
+      display: block;
+      .col {
+        &:nth-child(1) .img-area {
+            background-image: url(/assets/images/beach.png);
+            background-size: 150%;
+            background-position: center;
+            // background-color: #eee;
+        }
+        &:nth-child(2) .img-area {
+            background-image: url(/assets/images/sb-screenshot-closeup.jpg);
+        }
+      }
+      .card-link {
+          border-radius: 10px;
+          border: 1px solid #fafafa;
+          overflow: hidden;
+          box-shadow: 0 4px 45px 0 rgba(1,1,1,.05);
+          transition: .2s all;
+          cursor: pointer;
+          display: block;
+          &:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 8px 25px 0 rgba(1, 1, 1, 0.1);
+              .text-area i.fas {
+                margin-left: 18px;
+              }
+          }
+        
+        .img-area {
+            height: 270px;
+            background-size: cover;
+        }
+        .text-area {
+            line-height: 1em;
+            padding: 19px 27px;
+            font-weight: bold;
+            color: black;
+            i.fas {
+                margin-left: 15px;
+                transform: translateY(1px);
+                font-size: 15px;
+                transition: .2s all;
+            }
+        }
+    }
+  }
   
   
 
@@ -433,7 +700,7 @@ header {
   HOMEPAGE
 ===========================================================*/
 
-
+// Global styles
 .project-container {
     @include grid;
     .line-element {
@@ -442,6 +709,32 @@ header {
     .grid {
         top: 0;
         left: 0;
+    }
+}
+
+// Link styling
+a.project-link {
+    color: #333;
+    font-size: 15px;
+    text-decoration: none !important;
+    border-bottom: 4px solid #F7E376;
+    padding-bottom: 5px;
+    font-weight: 700;
+    transition: .2s all;
+    margin-top: 50px;
+    padding-right: 12px;
+    display: inline-block;
+    i.fas {
+        transform: translateX(10px);
+        transition: .2s all;
+    }
+    &:hover {
+        i.fas {
+            transform: translateX(15px)
+        }
+    }
+    &.borderless {
+        border-bottom: 0;
     }
 }
 
@@ -462,8 +755,8 @@ header {
     // Arrow
     .arrow-parent {
         position: absolute;
-        margin-top: 50.3vh;
-        margin-left: calc(16.6vw + 705px);
+        margin-top: 50.2vh;
+        margin-left: calc(16.6vw + 585px);
         overflow: hidden;
         position: fixed;
         .hero-arrow {
@@ -525,7 +818,7 @@ header {
           line-height: 1em;
           color: white;
           display: block;
-          letter-spacing: -2px;
+          letter-spacing: -5px;
           @media screen and (max-width: 600px) {
             font-size: 90px;
           }
@@ -534,7 +827,7 @@ header {
             display: flex;
             max-width: 750px;
             color: white;
-            font-size: 30px;
+            font-size: 27px;
             margin-top: 30px;
             display: block;
             line-height: 1.6em;
@@ -542,7 +835,7 @@ header {
             width: auto;
             span {
                 &:nth-child(1) {
-                    color: #FCF2BD;
+                    color: #F7E376;
                 }
                 &:nth-child(2) {
                     color: #F7E376;
@@ -584,19 +877,21 @@ header {
             padding-right: 70px;
             margin-bottom: 50px;
             .category {
-                font-size: 14px;
+                font-size: 16px;
                 color: #aaa;
-                font-weight: 500;
+                font-weight: 900;
                 span {
-                    margin-left: 10px;
-                    margin-right: 10px;
+                    margin-left: 8px;
+                    margin-right: 8px;
                 }
             }
             h1 {
                 font-size: 50px;
                 font-weight: 900;
-                color: black;
+                font-family: 'Abril Fatface', cursive;
+                color: #333;
                 margin-bottom: 40px;
+                letter-spacing: 0px;
             }
             p {
                 color: black;
@@ -604,27 +899,7 @@ header {
                     width: 80%;
                 }
             }
-            a.project-link {
-                color: #545459;
-                font-size: 15px;
-                text-decoration: none !important;
-                border-bottom: 4px solid #F7E376;
-                padding-bottom: 5px;
-                font-weight: 500;
-                transition: .2s all;
-                margin-top: 50px;
-                padding-right: 12px;
-                display: inline-block;
-                i.fas {
-                    transform: translateX(10px);
-                    transition: .2s all;
-                }
-                &:hover {
-                    i.fas {
-                        transform: translateX(15px)
-                    }
-                }
-            }
+            
             @media screen and (max-width: 1000px) {
                 width: calc(16.667% * 4);
             }
