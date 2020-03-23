@@ -13,7 +13,6 @@ jQuery(document).ready(function($) {
         .to('.hero-arrow',1,{x:'0%', opacity: 1, ease: Power2.easeOut},'-=0')
         .to('.arrow-parent',1,{delay:.8, right:arrow, ease: Power2.easeOut},'1.5')
         .staggerFrom('#work, .arrow-lines',2,{scaleY: 0, transformOrigin: "top center", ease: Power2.easeOut})
-        // .to('.contact',1,{x:'0%', ease: Power2.easeOut},'-=.3')
         .fromTo("#envelope",1 ,{drawSVG:1}, {drawSVG:"100%"})
     };
 
@@ -39,7 +38,7 @@ jQuery(document).ready(function($) {
         TweenMax.to('.descriptor-1 span', .9, {color:'white'}),
         TweenMax.to('.descriptor-2 span', 9, {color:'white', delay: 10}),
         TweenMax.to(lines, 500, {scaleX: 1000, transformOrigin: "left"}), 
-        TweenMax.to('.bg', 100, {autoAlpha:0}),
+        TweenMax.to('.bg, .contact-parent', 100, {autoAlpha:0}),
         TweenMax.to('.line-parent-1', 50, {autoAlpha:0, delay: 15, ease: Power1.easeOut}), 
         TweenMax.to('.line-parent-2', 50, {autoAlpha:0, delay: 15, ease: Power1.easeOut}), 
         TweenMax.to('.line-parent-3', 50, {autoAlpha:0, delay: 15, ease: Power1.easeOut}), 

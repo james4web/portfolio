@@ -175,15 +175,18 @@ p {
 h1 {
     margin-top: 15px;
     font-size: 75px;
-    font-weight: 900;
-    color: black;
+    font-weight: 800;
+    color: #333;
     margin-bottom: 8px;
     line-height: 1em;
+    font-weight:normal !important;
     &.text-js {
         padding-left: 10px;
         letter-spacing: -1px !important;
         font-weight: 400;
+        color: #333;
         font-family: 'Abril Fatface', cursive;
+        outline: 0;
     }
 }
 h5 {
@@ -886,7 +889,7 @@ a.project-link {
                 margin-bottom: 80px;
             }
             &.descriptor-2 {
-                margin-top: 70px;
+                margin-top: 80px;
                 overflow: hidden;
             }
 
