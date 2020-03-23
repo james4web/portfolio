@@ -25,8 +25,10 @@ $color3: black;
         pointer-events: none;
         .line-parent {
             height: 100%;
+            width: 16.6vw;
             display: flex;
             position: absolute;
+            background-color: #E3C227;
             &:nth-child(1) {
                 margin-left: 0;
             }
@@ -46,9 +48,10 @@ $color3: black;
                 margin-left: 83vw;
             }
             .line-element {
-                background-color: #444;
-                width: 1px;
+                background-color: #FFF1B1;
+                width: 100%;
                 height: 100%;
+                right: 0;
             }
         }
     }
@@ -103,7 +106,6 @@ img {
 }
 
 .h-serif-sm {
-    // font-family: 'Vollkorn', serif;
     font-family: 'Abril Fatface', cursive;
     font-size: 26px !important;
     color: black;
@@ -178,8 +180,10 @@ h1 {
     margin-bottom: 8px;
     line-height: 1em;
     &.text-js {
-        margin-left: -5px;
-        letter-spacing: -10px !important;
+        padding-left: 10px;
+        letter-spacing: 5px !important;
+        font-weight: 400;
+        font-family: 'Abril Fatface', cursive;
     }
 }
 h5 {
@@ -317,13 +321,14 @@ ul {
     }
     p.heading {
         font-size: 20px;
-        top: calc(50vh - 150px);
+        top: calc(50vh - 200px);
         left: calc(16.667vw + (16.667vw / 2));
         color: black;
         text-align: center;
         background-color: white;
         border: 1px solid #ddd;
         font-weight: 800 !important;
+        box-shadow: -15px 15px 0px #f7ebad;
         margin-top: 20px;
         margin-bottom: 5px;
         width: calc(16.6vw * 3);
@@ -633,7 +638,7 @@ header {
 
 //   ebay inerstial page
   .ebay-landing {
-    height: 400px;
+    height: 370px;
     .project-text {
         padding-top: 80px;
         h1 {
@@ -704,7 +709,7 @@ header {
 .project-container {
     @include grid;
     .line-element {
-        background-color: red;
+        // background-color: red;
     }
     .grid {
         top: 0;
@@ -747,9 +752,9 @@ a.project-link {
     margin-bottom: 100px;
     .bg {
         position: fixed;
-        background-color: #111;
+        background-color: #fff;
         width: 100%;
-        height: 100%;
+        height: 100vh;
     }
     @include grid;
     // Arrow
@@ -781,23 +786,62 @@ a.project-link {
     }
     // Contact
     .contact-parent {
-        overflow: hidden;
+        // overflow: hidden;
         position: fixed;
+        text-align: center;
         top: 30px;
         left: 83%;
         width: 300px;
-        height: 100px;
+        height: 100vh;
         .contact {
-            color: white;
-            font-size: 14px;
+            color: #333;
+            background: white;
+            padding-top: 8px;
+            height: 42px;
+            box-shadow: 0 4px 20px rgba(1,1,1,.1);
+            width: 100px;
+            font-size: 16px;
+            border-radius: 2px;
             font-weight: 800;
             position: absolute;
-            border-bottom: 2px solid #FBCD25;
-            padding-right: 20px;
+            border: 2px solid rgba(1,1,1,0);
+            text-decoration: none !important;
+            letter-spacing: -.3px;
             &:hover {
                 text-decoration: none !important;
-                padding-right: 35px;            
-                transition: .4s all;
+                background:#E3C227;
+                border: 2px solid #fff;
+                color: white !important;
+                transition: .2s all;
+            }
+        }
+        .resume-parent {
+            // overflow: hidden;
+            position: fixed;
+            text-align: center;
+            top: 30px;
+            left: 63%;
+            width: 300px;
+            height: 100vh;
+            .resume {
+                color: #333;
+                background: white;
+                padding-top: 11px;
+                height: 50px;
+                box-shadow: 0 4px 20px rgba(1,1,1,.1);
+                width: 115px;
+                font-size: 18px;
+                font-weight: 800;
+                position: absolute;
+                border: 2px solid #E3C227;
+                text-decoration: none !important;
+                &:hover {
+                    text-decoration: none !important;
+                    background:#E3C227;
+                    border: 2px solid #fff;
+                    color: white !important;
+                    transition: .2s all;
+                }
             }
         }
         @media screen and (max-width: 999px) {
@@ -808,15 +852,20 @@ a.project-link {
     .title-main {
         text-align: left !important;
         margin-left: 16.6vw;
-        margin-top: calc(50vh - 188px);
+        margin-top: calc(50vh - 200px);
+        .text-parent {
+            overflow: hidden;
+            width: 100%;
+            margin-left: 16vw;
+        }
         h1 {
           font-weight: 900;
-          font-size: 150px;
-          margin-top: -20px;
+          font-size: 130px;
+          margin-top: 0px;
           margin-bottom: 0;
           margin-left: -10px;
           line-height: 1em;
-          color: white;
+          color: black;
           display: block;
           letter-spacing: -5px;
           @media screen and (max-width: 600px) {
@@ -827,23 +876,20 @@ a.project-link {
             display: flex;
             max-width: 750px;
             color: white;
-            font-size: 27px;
-            margin-top: 30px;
+            font-size: 30px;
+            margin-top: 0px;
             display: block;
             line-height: 1.6em;
-            font-weight: 900;
+            font-weight: 500;
             width: auto;
-            span {
-                &:nth-child(1) {
-                    color: #F7E376;
-                }
-                &:nth-child(2) {
-                    color: #F7E376;
-                }
-                &:nth-child(3) {
-                    color: #FBCD25;
-                }
+            &:nth-of-type(1) {
+                margin-bottom: 80px;
             }
+            &.descriptor-2 {
+                margin-top: 70px;
+                overflow: hidden;
+            }
+
             @media screen and (max-width: 600px) {
                 font-size: 20px;
               }
@@ -886,7 +932,7 @@ a.project-link {
                 }
             }
             h1 {
-                font-size: 50px;
+                font-size: 55px;
                 font-weight: 900;
                 font-family: 'Abril Fatface', cursive;
                 color: #333;

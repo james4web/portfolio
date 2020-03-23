@@ -8,38 +8,44 @@ jQuery(document).ready(function($) {
     if ($(window).width() >= 1000){	
         var lines = new TimelineMax({yoyo:true, repeatDelay:2})
         .to('.text-js',1,{x:'0%', ease: Power2.easeOut})
-        .to('.descriptor,.hero-arrow',1,{x:'0%', opacity:1, ease: Power2.easeOut})
+        .to('.descriptor-1',1,{x:'0%', opacity:1, ease: Power2.easeOut})
+        .to('.descriptor-2',1,{x:'0%', opacity:1, ease: Power2.easeOut})
         .to('.hero-arrow',1,{x:'0%', opacity: 1, ease: Power2.easeOut},'-=0')
         .to('.arrow-parent',1,{delay:.8, right:arrow, ease: Power2.easeOut},'1.5')
         .staggerFrom('#work, .arrow-lines',2,{scaleY: 0, transformOrigin: "top center", ease: Power2.easeOut})
-        .to('.contact',1,{x:'0%', ease: Power2.easeOut},'-=.3')
+        // .to('.contact',1,{x:'0%', ease: Power2.easeOut},'-=.3')
         .fromTo("#envelope",1 ,{drawSVG:1}, {drawSVG:"100%"})
     };
 
     if ($(window).width() <= 1000){	
         var lines = new TimelineMax({yoyo:true, repeatDelay:2})
         .to('.text-js',1,{x:'0%', ease: Power2.easeOut})
-        .to('.descriptor',1,{x:'0%', opacity:1, ease: Power2.easeOut})
+        .to('.descriptor-1, .contact',1,{x:'0%', opacity:1, ease: Power2.easeOut})
+        .to('.descriptor-2',1,{x:'0%', opacity:1, delay:10, ease: Power2.easeOut})
         .to('.hero-arrow',1,{x:'0%', y:'-20%', opacity: 0},'-=1')
         .to('.hero-arrow',1,{y: '0%',opacity: 1, ease: Power2.easeOut},'-=0')
-        .staggerFrom('#work, .arrow-lines',2,{scaleY: 0, opacity: 1, transformOrigin: "top center", ease: Power2.easeOut})
-        .to('.contact',1,{x:'0%', ease: Power2.easeOut},'-=.3')
+        .staggerFrom('#work',2,{scaleY: 0, opacity: 1, transformOrigin: "top center", ease: Power2.easeOut})
         .fromTo("#envelope",1 ,{drawSVG:1}, {drawSVG:"100%"})
     };
 
     //Scroll Starts
     
     var controller = new ScrollMagic.Controller();
-    var lines = $('.intro-section .line-element');
+    var lines = $('.intro-section .line-parent');
     
     var tlMainScroll = new TimelineMax()
     .add([
-        TweenMax.to('.intro-section .line-element',1,{backgroundColor:'red'}),
-        TweenMax.to(lines, .001, {backgroundColor:'white', autoAlpha:1}),
-        TweenMax.to('.descriptor span, .contact', .001, {color:'white', borderBottomColor:'white'}),
+        TweenMax.to('.intro-section .text-js',5,{color:'white'}),
+        TweenMax.to('.descriptor-1 span', .9, {color:'white'}),
+        TweenMax.to('.descriptor-2 span', 9, {color:'white', delay: 10}),
         TweenMax.to(lines, 500, {scaleX: 1000, transformOrigin: "left"}), 
-        TweenMax.to('.bg, .title-main', 100, {autoAlpha:0}),
-        TweenMax.to(lines, 200, {autoAlpha:0, delay:4}), 
+        TweenMax.to('.bg', 100, {autoAlpha:0}),
+        TweenMax.to('.line-parent-1', 50, {autoAlpha:0, delay: 15, ease: Power1.easeOut}), 
+        TweenMax.to('.line-parent-2', 50, {autoAlpha:0, delay: 15, ease: Power1.easeOut}), 
+        TweenMax.to('.line-parent-3', 50, {autoAlpha:0, delay: 15, ease: Power1.easeOut}), 
+        TweenMax.to('.line-parent-4', 50, {autoAlpha:0, delay: 15, ease: Power1.easeOut}), 
+        TweenMax.to('.line-parent-5', 50, {autoAlpha:0, delay: 15, ease: Power1.easeOut}), 
+        TweenMax.to('.line-parent-6', 50, {autoAlpha:0, delay: 15, ease: Power1.easeOut}), 
     ]);
 
 
