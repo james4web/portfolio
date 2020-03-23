@@ -173,7 +173,7 @@ header.header1.reversed .container .logo a:hover .fa-arrow-left:before { color: 
 
 .project-text span { color: #999 !important; font-weight: 500; margin-bottom: 15px; margin-top: 10px; display: inline-block; font-size: 18px; }
 
-.project-text h1 { width: 100%; font-weight: 900; font-size: 80px; line-height: 1em; text-shadow: 0 3px 55px rgba(255, 255, 255, 0.8); margin-top: 0px; margin-bottom: 30px !important; font-family: 'Abril Fatface', cursive; letter-spacing: 0px; color: #000; font-weight: 300; }
+.project-text h1 { width: 100%; font-weight: 900; font-size: 80px; line-height: 1em; text-shadow: 0 3px 55px rgba(255, 255, 255, 0.8); margin-top: 0px; margin-bottom: 30px !important; font-family: 'Abril Fatface', cursive; letter-spacing: 0px; color: #333; font-weight: 300; }
 
 .project-text p { color: #999 !important; font-weight: 500; margin-bottom: 0; font-size: 18px; }
 
@@ -342,7 +342,7 @@ a.project-link.borderless { border-bottom: 0; }
 
 .container-fluid.hero .title-main { text-align: left !important; margin-left: 16.6vw; margin-top: calc(50vh - 200px); }
 
-.container-fluid.hero .title-main .text-parent { overflow: hidden; width: 100%; margin-left: 16vw; }
+.container-fluid.hero .title-main .text-parent { overflow: hidden; width: 100%; margin-left: 16.6vw; }
 
 .container-fluid.hero .title-main h1 { font-weight: 900; font-size: 130px; margin-top: 0px; margin-bottom: 0; margin-left: -10px; line-height: 1em; color: black; display: block; letter-spacing: -5px; }
 
