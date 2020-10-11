@@ -182,11 +182,12 @@ h1 {
     font-weight:normal !important;
     &.text-js {
         padding-left: 10px;
-        letter-spacing: -1px !important;
+        letter-spacing: 8px !important;
         font-weight: 800 !important;
         color: #333;
         font-family: 'helvetica', 'hevetica neue', arial, sans-serif;
         outline: 0;
+        font-size: 140px !important;
     }
 }
 h5 {
